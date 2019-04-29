@@ -25,7 +25,9 @@
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
-    "prettier": "^1.17.0"
+    "prettier": "^1.17.0",
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.3.0"
   },
   "keywords": [
     "gatsby"
@@ -38,6 +40,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "lint": "eslint --ext .js,.jsx .",
+    "style-lint": "stylelint **/*.css --fix ",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
