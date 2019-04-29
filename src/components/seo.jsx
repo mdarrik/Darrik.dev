@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, keywords, title }) {
             title
             description
             author
+            keywords
           }
         }
       }
@@ -26,7 +27,7 @@ function SEO({ description, lang, meta, keywords, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-
+  const metaKeywords = keywords.length ? keywords : site.siteMetadata.keywords;
   return (
     <Helmet
       htmlAttributes={{
@@ -69,10 +70,10 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
       ]
         .concat(
-          keywords.length > 0
+          metaKeywords.length > 0
             ? {
                 name: `keywords`,
-                content: keywords.join(`, `),
+                content: metaKeywords.join(`, `),
               }
             : []
         )
