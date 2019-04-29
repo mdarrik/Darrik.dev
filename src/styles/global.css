@@ -1,0 +1,19 @@
+:root {
+  --primary-color-100: #cce3ff;
+  --primary-color-200: #a3cdff;
+  --primary-color-300: #67a7f4;
+  --primary-color-400: #4795f5;
+  --primary-color-500: #4183d7;
+  --primary-color-600: #196ad2;
+  --primary-color-700: #1153a6;
+  --primary-color-800: #123564;
+  --primary-color-900: #081526;
+  --primary-color: var(--primary-color-500);
+
+  /* grays */
+  --gray-100: #d5dde7;
+  --gray-300: #abb2ba;
+  --gray-500: #6f8095;
+  --gray-700: #0e2a4e;
+  --gray-900: #091a2f;
+}
