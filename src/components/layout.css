@@ -752,3 +752,9 @@ pre tt::after {
     font-size: 100%;
   }
 }
+
+header {
+  background: var(--primary-color);
+  margin-bottom: 1.45rem;
+  padding-right: 2em;
+}
