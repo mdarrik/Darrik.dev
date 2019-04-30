@@ -55,7 +55,7 @@ a:hover {
 abbr[title] {
   text-decoration: underline;
   text-decoration: underline dotted;
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  border-bottom: 1px dotted hsla(var(--gray-900-hsl-vals), 0.5);
   cursor: help;
 }
 
@@ -100,7 +100,7 @@ h1 {
 
 mark {
   background-color: #ff0;
-  color: #000;
+  color: var(--gray-900);
 }
 
 small {
@@ -171,7 +171,7 @@ hr {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: calc(1.45rem - 1px);
-  background: hsla(0, 0%, 0%, 0.2);
+  background: hsla(var(--gray-900-hsl-vals), 0.2);
   border: none;
   height: 1px;
 }
@@ -295,7 +295,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
+  color: var(--body-text-color);
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -304,6 +304,7 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  background: var(--body-background-color);
 }
 
 h2 {
@@ -523,7 +524,7 @@ pre {
   margin-bottom: 1.45rem;
   font-size: 0.85rem;
   line-height: 1.42;
-  background: hsla(0, 0%, 0%, 0.04);
+  background: hsla(var(--gray-900-hsl-vals), 0.04);
   border-radius: 3px;
   overflow: auto;
   word-wrap: normal;
@@ -672,12 +673,12 @@ samp {
 }
 
 abbr {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  border-bottom: 1px dotted hsla(var(--gray-900-hsl-vals), 0.5);
   cursor: help;
 }
 
 acronym {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  border-bottom: 1px dotted hsla(var(--gray-900-hsl-vals), 0.5);
   cursor: help;
 }
 
@@ -688,7 +689,7 @@ thead {
 td,
 th {
   text-align: left;
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
+  border-bottom: 1px solid hsla(var(--gray-900-hsl-vals), 0.12);
   font-feature-settings: "tnum";
   -moz-font-feature-settings: "tnum";
   -ms-font-feature-settings: "tnum";
@@ -711,7 +712,7 @@ td:last-child {
 
 tt,
 code {
-  background-color: hsla(0, 0%, 0%, 0.04);
+  background-color: hsla(var(--gray-900-hsl-vals), 0.04);
   border-radius: 3px;
   font-family:
     "SFMono-Regular",
@@ -751,10 +752,4 @@ pre tt::after {
   html {
     font-size: 100%;
   }
-}
-
-header {
-  background: var(--primary-color);
-  margin-bottom: 1.45rem;
-  padding-right: 2em;
 }
