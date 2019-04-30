@@ -32,4 +32,7 @@
   --gray-700: hsl(var(--gray-700-hsl-vals));
   --gray-900: hsl(var(--gray-900-hsl-vals));
 
+  /* applied variables */
+  --body-background-color: hsla(var(--gray-100-hsl-vals), 0.8);
+  --body-text-color: hsla(var(--gray-900-hsl-vals), 0.8);
 }
