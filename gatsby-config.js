@@ -22,8 +22,8 @@ module.exports = {
         name: `DarrikMoberg`,
         short_name: `DMoberg`,
         start_url: `/`,
-        background_color: `#4183d7;`,
-        theme_color: `#4183d7;`,
+        background_color: `#4183d7`,
+        theme_color: `#4183d7`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
