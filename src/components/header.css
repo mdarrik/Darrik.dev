@@ -4,6 +4,9 @@ header {
   color: hsl(var(--gray-900-hsl-vals), 0.8);
   padding: 0 calc(0.5vw + 1rem);
   min-height: 1em;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 header a {
