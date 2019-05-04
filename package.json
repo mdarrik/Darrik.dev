@@ -27,7 +27,8 @@
     "eslint-plugin-react": "^7.12.4",
     "prettier": "^1.17.0",
     "stylelint": "^10.0.1",
-    "stylelint-config-standard": "^18.3.0"
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-prettier": "^1.0.6"
   },
   "keywords": [
     "gatsby"
