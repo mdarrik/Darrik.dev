@@ -1,9 +1,8 @@
 header {
   background: var(--primary-color);
   margin-bottom: 1.45rem;
-  /* padding-right: 2em; */
   color: hsl(var(--gray-900-hsl-vals), 0.8);
-  padding: 0 calc(3vw + 1rem);
+  padding: 0 calc(0.5vw + 1rem);
   min-height: 1em;
 }
 
