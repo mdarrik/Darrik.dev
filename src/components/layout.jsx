@@ -32,15 +32,13 @@ export default function Layout({ children }) {
       </a>
       <Header siteTitle={title} />
       <main id="main">{children}</main>
-        <footer>
-          &copy;
+      <footer>
+        &copy;
         {author} {new Date().getFullYear()}
-        </footer>
+      </footer>
     </>
   )
 }
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
-
-// export default Layout
