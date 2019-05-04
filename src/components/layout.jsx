@@ -27,8 +27,11 @@ export default function Layout({ children }) {
 
   return (
     <>
+      <a href="#main" className="visually-hidden">
+        Skip to Content
+      </a>
       <Header siteTitle={title} />
-      <main>{children}</main>
+      <main id="main">{children}</main>
         <footer>
           &copy;
         {author} {new Date().getFullYear()}
