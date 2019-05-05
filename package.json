@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "darrik-moberg-dev",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Darrik Moberg's personal site/blog.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Darrik Moberg",
   "dependencies": {
     "gatsby": "^2.3.25",
     "gatsby-image": "^2.0.39",
@@ -25,19 +25,33 @@
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
+    "husky": "^2.2.0",
+    "lint-staged": "^8.1.6",
     "prettier": "^1.17.0",
     "stylelint": "^10.0.1",
     "stylelint-config-standard": "^18.3.0",
     "stylelint-prettier": "^1.0.6"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "blog"
   ],
+  "lint-staged":
+  {
+    "*.{js,jsx}": ["eslint --fix", "prettier --write", "git add" ],
+    "*.{css, scss}": ["stylelint --fix", "prettier --write", "git add"]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit":"lint-staged"
+    },
+    "relative": true
+  },
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
+    "format": "prettier --write src/**/*.{js,jsx,css}",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "lint": "eslint --ext .js,.jsx .",
@@ -46,9 +60,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/mdarrik/DarrikMobergWebsite"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/mdarrik/DarrikMobergWebsite/issues"
   }
 }
