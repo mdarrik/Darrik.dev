@@ -1,3 +1,4 @@
+/* #region Gatsby Default Normalize CSS */
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -692,6 +693,10 @@ footer {
   margin: 2rem 1rem 0 0;
 }
 
+/* #endregion */
+
+/* #region Custom styles */
+
 .visually-hidden {
   /* https://a11yproject.com/posts/how-to-hide-content/ */
   position: absolute;
@@ -708,3 +713,5 @@ a.visually-hidden:focus {
   height: auto;
   overflow: auto;
 }
+
+/* #endregion */
