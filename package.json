@@ -36,14 +36,21 @@
     "gatsby",
     "blog"
   ],
-  "lint-staged":
-  {
-    "*.{js,jsx}": ["eslint --fix", "prettier --write", "git add" ],
-    "*.{css, scss}": ["stylelint --fix", "prettier --write", "git add"]
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{css, scss}": [
+      "stylelint --fix",
+      "prettier --write",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {
-      "pre-commit":"lint-staged"
+      "pre-commit": "lint-staged"
     },
     "relative": true
   },
