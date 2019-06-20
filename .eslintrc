@@ -1,7 +1,10 @@
 {
-  "extends": ["airbnb", "prettier"],
-  "plugins": ["react", "jsx-a11y", "import"],
+  "extends": [ "react-app","plugin:jsx-a11y/recommended","prettier"],
+  "plugins": ["react-hooks", "jsx-a11y", "react", "import"],
   "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-extra-semi": "warn",
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
@@ -14,7 +17,8 @@
       "off", {
         "allow": "single-child"
       }
-    ]
+    ],
+    "react/no-unknown-property": "error"
   },
   "settings": {
       "import/core-modules": []
