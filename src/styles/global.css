@@ -1,38 +1,38 @@
 :root {
-  --primary-color-100-hsl-vals: 212.9, 100%, 90%;
-  --primary-color-200-hsl-vals: 212.6, 100%, 82%;
-  --primary-color-300-hsl-vals: 212.8, 86.5%, 68%;
-  --primary-color-400-hsl-vals: 213.1, 89.7%, 62%;
-  --primary-color-500-hsl-vals: 213.6, 65.2%, 54.9%;
-  --primary-color-600-hsl-vals: 213.7, 78.7%, 46.1%;
-  --primary-color-700-hsl-vals: 213.4, 81.4%, 35.9%;
-  --primary-color-800-hsl-vals: 214.4, 69.5%, 23.1%;
-  --primary-color-900-hsl-vals: 214, 65.2%, 9%;
-  --primary-color-100: hsl(var(--primary-color-100-hsl-vals));
-  --primary-color-200: hsl(var(--primary-color-200-hsl-vals));
-  --primary-color-300: hsl(var(--primary-color-300-hsl-vals));
-  --primary-color-400: hsl(var(--primary-color-400-hsl-vals));
-  --primary-color-500: hsl(var(--primary-color-500-hsl-vals));
-  --primary-color-600: hsl(var(--primary-color-600-hsl-vals));
-  --primary-color-700: hsl(var(--primary-color-700-hsl-vals));
-  --primary-color-800: hsl(var(--primary-color-800-hsl-vals));
-  --primary-color-900: hsl(var(--primary-color-900-hsl-vals));
+  --primary-color-100-hsl-values: 212.9, 100%, 90%;
+  --primary-color-200-hsl-values: 212.6, 100%, 82%;
+  --primary-color-300-hsl-values: 212.8, 86.5%, 68%;
+  --primary-color-400-hsl-values: 213.1, 89.7%, 62%;
+  --primary-color-500-hsl-values: 213.6, 65.2%, 54.9%;
+  --primary-color-600-hsl-values: 213.7, 78.7%, 46.1%;
+  --primary-color-700-hsl-values: 213.4, 81.4%, 35.9%;
+  --primary-color-800-hsl-values: 214.4, 69.5%, 23.1%;
+  --primary-color-900-hsl-values: 214, 65.2%, 9%;
+  --primary-color-100: hsl(var(--primary-color-100-hsl-values));
+  --primary-color-200: hsl(var(--primary-color-200-hsl-values));
+  --primary-color-300: hsl(var(--primary-color-300-hsl-values));
+  --primary-color-400: hsl(var(--primary-color-400-hsl-values));
+  --primary-color-500: hsl(var(--primary-color-500-hsl-values));
+  --primary-color-600: hsl(var(--primary-color-600-hsl-values));
+  --primary-color-700: hsl(var(--primary-color-700-hsl-values));
+  --primary-color-800: hsl(var(--primary-color-800-hsl-values));
+  --primary-color-900: hsl(var(--primary-color-900-hsl-values));
   --primary-color: var(--primary-color-500);
 
   /* grays */
-  --gray-100-hsl-vals: 213.3, 27.3%, 98%;
-  --gray-200-hsl-vals: 213.3, 27.3%, 87.1%;
-  --gray-300-hsl-vals: 212, 9.8%, 70%;
-  --gray-500-hsl-vals: 213.2, 15.2%, 51%;
-  --gray-700-hsl-vals: 213.8, 69.6%, 18%;
-  --gray-900-hsl-vals: 213.2, 67.9%, 11%;
-  --gray-100: hsl(var(--gray-100-hsl-vals));
-  --gray-300: hsl(var(--gray-300-hsl-vals));
-  --gray-500: hsl(var(--gray-500-hsl-vals));
-  --gray-700: hsl(var(--gray-700-hsl-vals));
-  --gray-900: hsl(var(--gray-900-hsl-vals));
+  --gray-100-hsl-values: 213.3, 27.3%, 98%;
+  --gray-200-hsl-values: 213.3, 27.3%, 87.1%;
+  --gray-300-hsl-values: 212, 9.8%, 70%;
+  --gray-500-hsl-values: 213.2, 15.2%, 51%;
+  --gray-700-hsl-values: 213.8, 69.6%, 18%;
+  --gray-900-hsl-values: 213.2, 67.9%, 11%;
+  --gray-100: hsl(var(--gray-100-hsl-values));
+  --gray-300: hsl(var(--gray-300-hsl-values));
+  --gray-500: hsl(var(--gray-500-hsl-values));
+  --gray-700: hsl(var(--gray-700-hsl-values));
+  --gray-900: hsl(var(--gray-900-hsl-values));
 
   /* applied variables */
-  --body-background-color: hsla(var(--gray-100-hsl-vals), 0.8);
-  --body-text-color: hsla(var(--gray-900-hsl-vals), 0.8);
+  --body-background-color: hsla(var(--gray-100-hsl-values), 0.8);
+  --body-text-color: hsla(var(--gray-900-hsl-values), 0.8);
 }
