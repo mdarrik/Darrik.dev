@@ -697,6 +697,26 @@ footer {
 
 /* #region Custom styles */
 
+main {
+  margin: 2rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-content: center;
+}
+
 .visually-hidden {
   /* https://a11yproject.com/posts/how-to-hide-content/ */
   position: absolute;
