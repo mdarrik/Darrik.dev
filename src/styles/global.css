@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --primary-color-100-hsl-values: 212.9, 100%, 90%;
   --primary-color-200-hsl-values: 212.6, 100%, 82%;
