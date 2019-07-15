@@ -3,7 +3,7 @@ module.exports = {
     title: `Darrik Moberg`,
     description: `Darrik is a full-stack developer with a strong interest in the front end.`,
     author: `Darrik Moberg`,
-    keywords: [`Web Development`, `HTMl`, `CSS`, `JavaScript`, `JS`]
+    keywords: [`Web Development`, `HTMl`, `CSS`, `JavaScript`, `JS`],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -31,5 +31,7 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
+
+    `gatsby-plugin-postcss`,
   ],
 }
