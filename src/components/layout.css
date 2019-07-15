@@ -717,21 +717,4 @@ main {
   align-content: center;
 }
 
-.visually-hidden {
-  /* https://a11yproject.com/posts/how-to-hide-content/ */
-  position: absolute;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px 1px 1px 1px);
-  clip-path: rect(1px, 1px, 1px, 1px);
-}
-
-a.visually-hidden:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  overflow: auto;
-}
-
 /* #endregion */

@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+.visually-hidden {
+  /* https://a11yproject.com/posts/how-to-hide-content/ */
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip-path: rect(1px, 1px, 1px, 1px);
+}
+
+.visually-hidden:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: auto;
+}
+
+html {
+  font-size: 18px;
+}
+
 :root {
   --primary-color-100-hsl-values: 212.9, 100%, 90%;
   --primary-color-200-hsl-values: 212.6, 100%, 82%;
