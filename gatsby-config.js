@@ -33,5 +33,14 @@ module.exports = {
     `gatsby-plugin-offline`,
 
     `gatsby-plugin-postcss`,
+    {
+      //This needs to come after all other postcss plugins
+      //Otherwise it will not work correctly.
+      resolve: "gatsby-plugin-purgecss",
+      options: {
+        tailwind: true,
+        develop: true,
+      },
+    },
   ],
 }
