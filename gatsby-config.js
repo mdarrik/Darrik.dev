@@ -39,7 +39,7 @@ module.exports = {
       resolve: "gatsby-plugin-purgecss",
       options: {
         tailwind: true,
-        develop: true,
+        develop: false,
       },
     },
   ],
