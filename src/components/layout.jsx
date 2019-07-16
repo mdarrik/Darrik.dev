@@ -2,11 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql, useStaticQuery } from "gatsby"
 
-import "./layout.css"
-
 import Header from "./header"
 
-export default function Layout({ children }) {
+export default function Layout({ className, children }) {
   const query = useStaticQuery(
     graphql`
       query SiteTitleQuery {
@@ -32,8 +30,10 @@ export default function Layout({ children }) {
         Skip to Content
       </a>
       <Header siteTitle={title} />
-      <main id="main">{children}</main>
-      <footer>
+      <main id="main" className={className}>
+        {children}
+      </main>
+      <footer className="mt-8 mr-4 bg-gray-200 w-full">
         &copy;
         {author} {new Date().getFullYear()}
       </footer>
