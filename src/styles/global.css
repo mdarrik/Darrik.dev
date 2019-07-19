@@ -20,7 +20,7 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: calc(1rem + 2px);
 }
 
 :root {
