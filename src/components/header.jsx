@@ -9,7 +9,7 @@ const Header = ({ siteTitle }) => (
    content-center border-t-4 
    border-blue-400 text-lg"
   >
-    <span className="font-sans">
+    <span className="font-decorative">
       <Link to="/">{siteTitle}</Link>
     </span>
     <nav className="flex content-between">
