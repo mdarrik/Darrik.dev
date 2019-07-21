@@ -20,6 +20,16 @@ module.exports = {
     },
     extend: {},
   },
-  variants: {},
-  plugins: [],
+  variants: {
+    textColor: ["responsive", "hover", "focus", "visited"],
+  },
+  plugins: [
+    function({ addVariant, e }) {
+      addVariant("visited", ({ modifySelectors, separator }) => {
+        modifySelectors(({ className }) => {
+          return `.${e(`visited${separator}${className}`)}:visited`
+        })
+      })
+    },
+  ],
 }

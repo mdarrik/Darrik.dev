@@ -9,8 +9,13 @@ const Header = ({ siteTitle }) => (
    content-center border-t-4 
    border-blue-400 text-lg"
   >
-    <span className="font-decorative">
-      <Link to="/">{siteTitle}</Link>
+    <span>
+      <Link
+        to="/"
+        className="font-decorative text-black visited:text-black no-underline"
+      >
+        {siteTitle}
+      </Link>
     </span>
     <nav className="flex content-between">
       <ul>
@@ -18,6 +23,7 @@ const Header = ({ siteTitle }) => (
           <a
             href="https://www.github.com/mdarrik"
             aria-label="view my work on github"
+            className="no-underline text-black visited:text-black"
           >
             <svg
               className="w-4 h-4 inline mx-1"

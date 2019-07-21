@@ -32,11 +32,12 @@ const IndexPage = () => (
         <li className="mb-4 shadow-lg border-t-4 border-red-600 px-4">
           <h3 className="text-lg mb-2">
             <a href="https://sharktank-collaboration-presentation.netlify.com">
-              IT Shark Tank Presentation{" "}
-              <span className="text-sm text-green-700 flex justify-center md:inline">
-                (Completed)
-              </span>
+              IT Shark Tank Presentation
             </a>
+            <span className="text-sm text-green-700 flex justify-center md:inline">
+              {" "}
+              (Completed)
+            </span>
           </h3>
           <p className="flex flex-col">
             <span>
@@ -63,11 +64,12 @@ const IndexPage = () => (
         <li className="mb-4 shadow-lg border-t-4 border-teal-400 px-4">
           <h3 className="text-lg mb-2">
             <a href="https://gatsby-static-comments.netlify.com">
-              Gatsby Static Comments{" "}
-              <span className="text-sm flex justify-center md:inline text-orange-700">
-                (In Progress)
-              </span>
+              Gatsby Static Comments
             </a>
+            <span className="text-sm flex justify-center md:inline text-orange-700">
+              {" "}
+              (In Progress)
+            </span>
           </h3>
           <p className="flex flex-col">
             <span>

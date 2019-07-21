@@ -10,6 +10,19 @@ html {
 }
 
 @tailwind components;
+
+a {
+  @apply underline text-blue-600;
+}
+
+a:hover {
+  @apply text-blue-400;
+}
+
+a:visited {
+  @apply text-purple-700;
+}
+
 @tailwind utilities;
 
 .visually-hidden {
