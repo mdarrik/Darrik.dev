@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import Header from "./header"
 
-export default function Layout({ className, children }) {
+export default function Layout({ children }) {
   const query = useStaticQuery(
     graphql`
       query SiteTitleQuery {
@@ -25,19 +25,19 @@ export default function Layout({ className, children }) {
   } = query
 
   return (
-    <>
-      <a href="#main" className="visually-hidden">
+    <div className="min-h-screen flex flex-col">
+      <a href="#main" className="visually-hidden flex-none">
         Skip to Content
       </a>
       <Header siteTitle={title} />
-      <main id="main" className={className}>
+      <main id="main" className="flex-grow p-8">
         {children}
       </main>
-      <footer className="mt-8 mr-4 bg-gray-200 w-full">
+      <footer className="mt-8 mr-4 bg-gray-200 w-full flex-shrink">
         &copy;
         {author} {new Date().getFullYear()}
       </footer>
-    </>
+    </div>
   )
 }
 Layout.propTypes = {
