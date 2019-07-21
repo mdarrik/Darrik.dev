@@ -1,4 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Fredericka+the+Great&display=swap&text=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789%20%26%E2%80%94");
+
 @tailwind base;
+
+html {
+  font-family: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: calc(1rem + 2px);
+}
+
 @tailwind components;
 @tailwind utilities;
 
@@ -17,10 +27,6 @@
   width: auto;
   height: auto;
   overflow: auto;
-}
-
-html {
-  font-size: calc(1rem + 2px);
 }
 
 :root {
