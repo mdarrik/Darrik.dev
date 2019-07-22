@@ -10,10 +10,7 @@ const Header = ({ siteTitle }) => (
    border-blue-400 text-lg"
   >
     <span>
-      <Link
-        to="/"
-        className="font-decorative text-black visited:text-black no-underline"
-      >
+      <Link to="/" className="font-decorative text-black border-b-0">
         {siteTitle}
       </Link>
     </span>
@@ -23,7 +20,7 @@ const Header = ({ siteTitle }) => (
           <a
             href="https://www.github.com/mdarrik"
             aria-label="view my work on github"
-            className="no-underline text-black visited:text-black"
+            className="border-b-0 text-black"
           >
             <svg
               className="w-4 h-4 inline mx-1"

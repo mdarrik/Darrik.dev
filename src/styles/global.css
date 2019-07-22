@@ -12,15 +12,12 @@ html {
 @tailwind components;
 
 a {
-  @apply underline text-blue-600;
+  @apply text-blue-700 border-b-2 border-blue-800;
 }
 
+a:focus,
 a:hover {
-  @apply text-blue-400;
-}
-
-a:visited {
-  @apply text-purple-700;
+  @apply pb-1;
 }
 
 @tailwind utilities;

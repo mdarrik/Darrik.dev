@@ -29,7 +29,7 @@ const IndexPage = () => (
         Things I've Made
       </h2>
       <ul className="md:px-8">
-        <li className="mb-4 shadow-lg border-t-4 border-red-600 px-4">
+        <li className="mb-4 shadow-lg border-t-4 border-red-600 px-4 pb-2">
           <h3 className="text-lg mb-2">
             <a href="https://sharktank-collaboration-presentation.netlify.com">
               IT Shark Tank Presentation
@@ -53,15 +53,14 @@ const IndexPage = () => (
               as the slideshow for our presentation and was a big hit among both
               the "Sharks" and the 2 peers I presented with.
             </span>
-            <a
-              href="https://github.com/mdarrik/sharktank-collaboration-presentation"
-              className="self-center underline text-blue-600"
-            >
-              See Code
-            </a>
+            <span className="self-center">
+              <a href="https://github.com/mdarrik/sharktank-collaboration-presentation">
+                See Code
+              </a>
+            </span>
           </p>
         </li>
-        <li className="mb-4 shadow-lg border-t-4 border-teal-400 px-4">
+        <li className="mb-4 shadow-lg border-t-4 border-teal-400 px-4 pb-2">
           <h3 className="text-lg mb-2">
             <a href="https://gatsby-static-comments.netlify.com">
               Gatsby Static Comments
@@ -80,12 +79,14 @@ const IndexPage = () => (
               Functions to handle comment submission, low-level spam filtering,
               input sanitization, and saving.
             </span>
-            <a
-              href="https://github.com/mdarrik/gatsby-static-comments"
-              className="self-center underline text-blue-600"
-            >
-              See Code
-            </a>
+            <span className="self-center">
+              <a
+                href="https://github.com/mdarrik/gatsby-static-comments"
+                className="self-center"
+              >
+                See Code
+              </a>
+            </span>
           </p>
         </li>
       </ul>
