@@ -18,9 +18,10 @@ const IndexPage = () => (
       <div className="shadow-lg mb-8 border-t-4 border-green-300 md:mx-8 md:px-8 px-2 pb-4 pt-2">
         <p className="ml-2">
           I have a life sciences background and am currently working in the
-          public sector. I mostly do web &amp; backend stuff. I enjoy working on
-          user-centric products and using technology to streamline user
-          experiences and workflows.
+          public sector. I mostly code using web &amp; backend technologies. I
+          enjoy working on user-centric products and using technology to
+          streamline user experiences and workflows. I'm also strongly committed
+          to building accessibility-first tools and products.
         </p>
       </div>
     </div>
