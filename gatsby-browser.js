@@ -6,4 +6,6 @@
 
 // You can delete this file if you're not using it
 
-import "./src/styles/global.css";
+import "typeface-fira-sans"
+import "typeface-fredericka-the-great"
+import "./src/styles/global.css"
