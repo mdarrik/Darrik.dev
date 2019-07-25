@@ -11,7 +11,7 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, keywords, title }) {
-  const { site } = useStaticQuery(
+  const { site, file } = useStaticQuery(
     graphql`
       query {
         site {
@@ -27,7 +27,7 @@ function SEO({ description, lang, meta, keywords, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const metaKeywords = keywords.length ? keywords : site.siteMetadata.keywords;
+  const metaKeywords = keywords.length ? keywords : site.siteMetadata.keywords
   return (
     <Helmet
       htmlAttributes={{
@@ -35,6 +35,13 @@ function SEO({ description, lang, meta, keywords, title }) {
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
+      link={[
+        {
+          rel: "stylesheet",
+          href:
+            "https://fonts.googleapis.com/css?family=Fira+Sans:400|Fredericka+the+Great&display=swap&text=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789%20%21%22%23%24%25%26%27%28%29%2A%2B%2C%2D%2E%2F%3A%3B%3C%3D%3E%3F%40%5B%5C%5D%5E%5F%60%7B%7C%7D%7E",
+        },
+      ]}
       meta={[
         {
           name: `description`,
