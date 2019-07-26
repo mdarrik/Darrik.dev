@@ -2,6 +2,10 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import ProjectCard from "../components/project-card"
+import ProjectStatus, {
+  ProjectStatusStates,
+} from "../components/project-status"
 
 const IndexPage = () => (
   <Layout>
@@ -30,15 +34,12 @@ const IndexPage = () => (
         Things I've Made
       </h2>
       <ul className="md:px-8">
-        <li className="mb-4 shadow-lg border-t-4 border-red-600 px-4 pb-2">
+        <ProjectCard el="li" className="border-t-4 border-red-600">
           <h3 className="text-lg mb-2">
             <a href="https://sharktank-collaboration-presentation.netlify.com">
               IT Shark Tank Presentation
             </a>
-            <span className="text-sm text-green-700 flex justify-center md:inline">
-              {" "}
-              (Completed)
-            </span>
+            <ProjectStatus projectStatusState={ProjectStatusStates.completed} />
           </h3>
           <p className="flex flex-col">
             <span>
@@ -60,16 +61,15 @@ const IndexPage = () => (
               </a>
             </span>
           </p>
-        </li>
-        <li className="mb-4 shadow-lg border-t-4 border-teal-400 px-4 pb-2">
+        </ProjectCard>
+        <ProjectCard el="li" className="border-t-4 border-teal-400">
           <h3 className="text-lg mb-2">
             <a href="https://gatsby-static-comments.netlify.com">
               Gatsby Static Comments
             </a>
-            <span className="text-sm flex justify-center md:inline text-orange-700">
-              {" "}
-              (In Progress)
-            </span>
+            <ProjectStatus
+              projectStatusState={ProjectStatusStates.inProgress}
+            />
           </h3>
           <p className="flex flex-col">
             <span>
@@ -89,7 +89,7 @@ const IndexPage = () => (
               </a>
             </span>
           </p>
-        </li>
+        </ProjectCard>
       </ul>
     </section>
   </Layout>
