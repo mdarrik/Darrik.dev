@@ -10,10 +10,10 @@
 This is the source code for my personal site. I have a lot of plans for it down the road. I want to add a blog, my resume, and some other fun things. 
 
 TODO: 
-[] Add Social Media Links
-[] Add
-[] Add a Contact Page
-[] Add Netlify CMS + Blog Integrations
+- [] Add Social Media Links
+- [] Add
+- [] Add a Contact Page
+- [] Add Netlify CMS + Blog Integrations
 
 **Bugs/Suggestions?**
 1. Found a bug? Open an issue here. 
