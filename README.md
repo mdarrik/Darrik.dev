@@ -21,5 +21,5 @@ TODO:
 3. Is there a topic you want to see me write about? This is a great place to suggest it! Open an issue, I'm always open to some good blogging ideas! 
 
 
-  **`LICENSE`**: The code for my site is licensed under the MIT license. The content of my site is __NOT__. Feel free to use my site as a starting point for your own, but please use your own content. 
+  **`LICENSE`**: The code for my site is licensed under the MIT license. Feel free to use my site as a starting point for your own, but please use your own content. 
 
