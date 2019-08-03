@@ -1,0 +1,12 @@
+- name: Twitter
+  url: https://www.twitter.com/mdarrik,
+  imgName: twitter.svg
+- name: GitHub
+  url: https://www.github.com/mdarrik
+  imgName: github.svg
+- name: Patreon
+  url: https://www.patreon.com/mdarrik
+  imgName: patreon.svg
+- name: Dev.To
+  url: https://dev.to/mdarrik
+  imgName: dev-dot-to.svg
