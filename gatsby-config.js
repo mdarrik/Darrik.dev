@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Darrik Moberg`,
-    description: `Darrik is a full-stack developer with a strong interest in the front end.`,
+    description: `Darrik is a full stack developer with an interest in developing user-focused, accessible products.`,
     author: `Darrik Moberg`,
-    keywords: [`Web Development`, `HTMl`, `CSS`, `JavaScript`, `JS`],
+    keywords: [`Web Development`, `HTMl`, `CSS`, `JavaScript`, `.NET`],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
