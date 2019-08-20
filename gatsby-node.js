@@ -10,7 +10,7 @@
 exports.sourceNodes = ({ actions }) => {
   actions.createTypes(`
         type SocialMediaSite implements Node {
-            icon: File @link(by: "relativePath", from:"imgName") #create a link to the icon with relativePath = imgName. 
+            icon: File @link(by: "relativePath") #create a link to the icon with relativePath = imgName. 
         }
     `)
 }
