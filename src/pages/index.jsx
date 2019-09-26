@@ -10,14 +10,14 @@ import ProjectStatus, {
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <hgroup className="mb-4 flex flex-col justify-center mx-auto md:block">
+    <div className="mb-4 flex flex-col justify-center mx-auto md:block">
       <h1 className="font-semibold md:text-3xl text-2xl mb-1 font-decorative md:inline">
         I'm Darrik Moberg &mdash;{" "}
+        <span className="md:text-2xl text-xl font-sans font-normal md:inline">
+          Full Stack Developer
+        </span>
       </h1>
-      <h2 className="md:text-2xl text-xl font-sans md:inline">
-        Full Stack Developer
-      </h2>
-    </hgroup>
+    </div>
     <div className="d-flex justify-center">
       <div className="shadow-lg mb-8 border-t-4 border-green-300 md:mx-8 md:px-8 px-2 pb-4 pt-2">
         <p className="ml-2">
