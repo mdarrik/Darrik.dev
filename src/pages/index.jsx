@@ -13,7 +13,7 @@ const IndexPage = () => (
     <div className="mb-4 flex flex-col justify-center mx-auto md:block">
       <h1 className="font-semibold md:text-3xl text-2xl mb-1 font-decorative md:inline">
         I'm Darrik Moberg &mdash;{" "}
-        <span className="md:text-2xl text-xl font-sans font-normal md:inline">
+        <span className="md:text-2xl text-xl font-sans font-normal block md:inline">
           Full Stack Developer
         </span>
       </h1>
