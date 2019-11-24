@@ -39,7 +39,6 @@ const IndexPage = () => (
             <a href="https://sharktank-collaboration-presentation.netlify.com">
               IT Shark Tank Presentation
             </a>
-            <ProjectStatus projectStatusState={ProjectStatusStates.completed} />
           </h3>
           <p className="flex flex-col">
             <span>
@@ -64,21 +63,15 @@ const IndexPage = () => (
         </ProjectCard>
         <ProjectCard el="li" className="border-t-4 border-teal-400">
           <h3 className="text-lg mb-2">
-            <a href="https://gatsby-static-comments.netlify.com">
-              Gatsby Static Comments
-            </a>
-            <ProjectStatus
-              projectStatusState={ProjectStatusStates.inProgress}
-            />
+            <a href="https://soundboard.darrik.dev">Gatsby Theme Soundboard</a>
           </h3>
           <p className="flex flex-col">
             <span>
-              Simple <abbr title="Proof Of Concept">POC</abbr> of a way to
-              handle comments in <a href="https://www.gatsbyjs.org/">Gatsby</a>{" "}
-              without depending on 3rd party, non-static solutions. Uses{" "}
-              <a href="https://www.netlify.com/">Netlify</a> Forms &amp;
-              Functions to handle comment submission, low-level spam filtering,
-              input sanitization, and saving.
+              This is my first Gatsby Theme. It was inspired by a twitter
+              conversation I had with Sarah Drasner and Jason Lengstorf. It
+              creates an accessible soundboard on any site. It allows the sounds
+              to trigger side effects (such as lambda functions) when a button
+              is pressed.
             </span>
             <span className="self-center">
               <a
