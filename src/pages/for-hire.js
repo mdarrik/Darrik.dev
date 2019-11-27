@@ -11,8 +11,9 @@ const ForHire = ({ props }) => {
     <Layout>
       <Seo title="For Hire" />
       <Headers.H1>I'm looking for work</Headers.H1>
-      <span className="block mb-2">
-        I'm currently seeking full time and freelance/consulting opportunities.
+      <span className="block mb-4 md:mb-2">
+        I'm currently seeking a new full-time position and am also available for
+        some freelance/consulting opportunities.
       </span>
       <ProjectCard el="section" className="border-t-4 border-green-600">
         <Headers.H2>Full Time Work</Headers.H2>
