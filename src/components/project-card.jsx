@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-function ProjectCard({ el = "div", className, children }) {
+function ProjectCard({ el = "div", className = "", children }) {
   const CardTag = el
   return (
     <CardTag className={"mb-4 shadow-lg px-4 pb-2 " + className.trim()}>

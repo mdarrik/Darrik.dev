@@ -14,12 +14,29 @@ const Header = ({ siteTitle }) => (
         {siteTitle}
       </Link>
     </span>
-    <nav className="flex content-between">
-      <ul>
-        <li>
+    <nav>
+      <ul className="flex content-between w-full">
+        <li className="mr-1 md:mx-4">
+          <Link
+            to="/"
+            className="text-black border-b-0"
+            activeClassName="text-green-700 p-0"
+          >
+            Home
+          </Link>
+        </li>
+        <li className="mr-1 md:mx-4">
+          <Link
+            to="/for-hire"
+            className="text-black border-b-0"
+            activeClassName="text-green-600 p-0"
+          >
+            Hire Me
+          </Link>
+        </li>
+        <li className="md:mx-4">
           <a
             href="https://www.github.com/mdarrik"
-            aria-label="view my work on github"
             className="border-b-0 text-black"
           >
             <svg
