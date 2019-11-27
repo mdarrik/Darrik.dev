@@ -14,12 +14,16 @@ const Header = ({ siteTitle }) => (
         {siteTitle}
       </Link>
     </span>
-    <nav className="flex content-between">
-      <ul>
-        <li>
+    <nav>
+      <ul className="flex content-between w-full">
+        <li className="mr-1 md:mx-4">
+          <Link href="for-hire" className="text-black border-b-0">
+            Hire Me
+          </Link>
+        </li>
+        <li className="md:mx-4">
           <a
             href="https://www.github.com/mdarrik"
-            aria-label="view my work on github"
             className="border-b-0 text-black"
           >
             <svg
