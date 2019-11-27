@@ -17,7 +17,20 @@ const Header = ({ siteTitle }) => (
     <nav>
       <ul className="flex content-between w-full">
         <li className="mr-1 md:mx-4">
-          <Link to="/for-hire" className="text-black border-b-0">
+          <Link
+            to="/"
+            className="text-black border-b-0"
+            activeClassName="text-green-700 p-0"
+          >
+            Home
+          </Link>
+        </li>
+        <li className="mr-1 md:mx-4">
+          <Link
+            to="/for-hire"
+            className="text-black border-b-0"
+            activeClassName="text-green-600 p-0"
+          >
             Hire Me
           </Link>
         </li>
