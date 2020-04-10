@@ -1,0 +1,27 @@
+{
+  "name": "www",
+  "version": "1.0.0",
+  "description": "Darrik's Site",
+  "main": "index.js",
+  "author": "Darrik",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "serve": "postcss site/_includes/global.css -o _site/global.css -c && eleventy --serve",
+    "build": "postcss site/_includes/global.css -o _site/global.css -c && eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "@fullhuman/postcss-purgecss": "^2.1.0",
+    "autoprefixer": "^9.7.4",
+    "cssnano": "^4.1.10",
+    "dotenv": "^8.2.0",
+    "postcss-cli": "^7.1.0",
+    "purgecss": "^2.1.0",
+    "tailwindcss": "^1.2.0"
+  },
+  "dependencies": {
+    "postcss-nesting": "^7.0.1"
+  }
+}
