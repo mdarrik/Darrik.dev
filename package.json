@@ -1,5 +1,5 @@
 {
-  "name": "Darrik.dev",
+  "name": "darrik.dev",
   "version": "1.0.0",
   "description": "My personal site",
   "main": "''",
@@ -8,6 +8,7 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "gatsby"
+    "gatsby",
+    "www"
   ]
 }
