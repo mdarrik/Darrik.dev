@@ -1,0 +1,13 @@
+# example netlify.toml
+[build]
+  command = "make build"
+  functions = "www/functions"
+  publish = "www/_site"
+  
+  ## (optional) Settings for Netlify Dev
+  ## https://github.com/netlify/netlify-dev-plugin#project-detection
+  [dev] 
+   command = "yarn workspace www serve" # Command to start your dev server
+   publish = "www/_site" # Folder with the static content for _redirect file
+  
+  ## more info on configuring this file: https://www.netlify.com/docs/netlify-toml-reference/ 
