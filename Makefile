@@ -1,3 +1,6 @@
 build: package.json
 	yarn workspace www build
-	pushd www/functions/newsletter-signup && yarn
+	$(MAKE build-newsletter-function)
+
+build-newsletter-function: ./www/functions/newsletter-signup/package.json
+	yarn
