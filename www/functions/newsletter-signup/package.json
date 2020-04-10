@@ -10,5 +10,8 @@
   "dependencies": {
     "libhoney": "^2.0.2",
     "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
   }
 }
