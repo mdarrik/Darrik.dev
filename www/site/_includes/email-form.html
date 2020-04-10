@@ -1,0 +1,16 @@
+<div class="shadow-lg bg-white border-4 border-blue-600 flex flex-col items-center md:w-2/3 mx-8 justify-center px-4 md:px-8 mb-4" >
+<h2 id="newsletter-form-header" class="text-2xl mb-2">Join my Newsletter</h2>
+<p class="text-sm mb-2">
+    Want to hear from me when I write a new blog post? Want a chance to shape future posts or get exclusive content?
+    Then sign up for my newsletter!
+</p>
+<form action="/api/newsletter-signup" method="POST" aria-labelledby="newsletter-form-header" aria-describedby="newsletter-privacy-note" class="flex flex-col mb-4">
+    <label for="newsletter-form-name">Your First Name</label>
+    <input type="text" id="newsletter-form-name" name="first_name" class="border border-green-600 rounded">
+    <label for="newsletter-form-email">Your Email Address</label>
+    <input type="email" id="newsletter-form-email" name="email" class="border border-green-600 rounded mb-2">
+    <button type="submit" class="bg-green-600 text-white">Join the newsletter</button>
+</form>
+<p id="newsletter-privacy-note" class="text-xs font-hairline mb-2"><span class="font-bold">Note: </span>I promise to not spam you, and I won't share your email with anyone except
+    Convertkit (who I use to manage my newsletter).</p>
+</div>
