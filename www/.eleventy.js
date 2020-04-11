@@ -42,6 +42,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("conditionalContains", (content, fullString, subString) => {
       return fullString.includes(subString) ? content : ''
     })
+    eleventyConfig.addFilter("log", (content) => { console.log(content)})
     eleventyConfig.addFilter("accent-border-color", getAccentBorderColor)
   return {
     dir: {
