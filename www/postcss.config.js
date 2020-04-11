@@ -10,7 +10,8 @@ const purgeCSS = purgeCssFunction({
         'site/**/*.liquid',
         'site/**/*.njk',
         'site/**/*.md',
-        'site/**/*.js'
+        'site/**/*.js',
+        '.eleventy.js'
     ],
     defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
 })
