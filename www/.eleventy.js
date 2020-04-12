@@ -33,7 +33,7 @@ module.exports = function(eleventyConfig) {
         if(post.fileSlug == pageUrl) {
           return `<li><a href="#current-series-link" class="font-bold" aria-current="true">${post.data.title} - You are Here</a></li>`
         }
-        return `<li><a href="${post.fileSlug}" aria-current="false">${post.data.title}</a></li>`
+        return `<li><a href="${post.url}" aria-current="false">${post.data.title}</a></li>`
       })
       return `<aside class="shadow-lg px-4 pb-2 border-4 mt-4 mb-2 ${getAccentBorderColor(borderColor)}"><h2>${title}</h2><ul>${listElements.join(' ')}</ul></aside>`
     })
