@@ -6,6 +6,7 @@ module.exports = {
     fontFamily: {
       sans: [
         '"Fira Sans"',
+        '"Fira Sans__subset"',
         "-apple-system",
         "BlinkMacSystemFont",
         '"Segoe UI"',
@@ -28,7 +29,7 @@ module.exports = {
         '"Courier New"',
         "monospace"
       ],
-      decorative: ['"Fredericka the Great"', "cursive"]
+      decorative: ['"Fredericka the Great"', '"Fredericka the Great__subset"', "cursive"]
     },
     extend: {}
   },

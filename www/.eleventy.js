@@ -12,6 +12,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("site/images")
     eleventyConfig.addPassthroughCopy({"site/_includes/prism-a11y-dark.css" : "prism-a11y-dark.css"})
     eleventyConfig.addPassthroughCopy({"../_redirects": "_redirects"})
+    eleventyConfig.addPassthroughCopy({'site/_includes/assets/subfont': '/subfont'})
     //Plugins
     syntaxHighlighting = require('@11ty/eleventy-plugin-syntaxhighlight')
     eleventyConfig.addPlugin(syntaxHighlighting)
