@@ -1,6 +1,10 @@
-build: package.json
+buildSite: package.json
 	yarn workspace www build
-	$(MAKE build-newsletter-function)
-
-build-newsletter-function: ./www/functions/newsletter-signup/package.json
+	cd www/functions/newsletter-signup && yarn
+	cd ../../..
+install: package.json
 	yarn
+subsetFont:
+	yarn subfont www/_site/index.html -i --inline-css --root www/_site
+clean: 
+	rm -rf www/_site
