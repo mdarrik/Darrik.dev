@@ -11,7 +11,6 @@ exports.handler = async (event, context) => {
     const formId = process.env.CK_FORM_ID
     const url = `https://api.convertkit.com/v3/forms/${formId}/subscribe`;
     const { first_name, email } = querystring.parse(event.body)
-    console.log(process.env.CK_PUBLIC_KEY)
     honeycombEvent.add({
         functionName: context.functionName,
         functionVersion: context.functionVersion,
@@ -37,7 +36,6 @@ exports.handler = async (event, context) => {
             first_name,
             email
         }
-        console.log(requestBody)
         const result = await fetch(url, {
             method: 'POST',
             headers: {
