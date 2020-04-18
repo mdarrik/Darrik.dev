@@ -129,7 +129,7 @@ const openGraphImageCard = (title, tags, author) => {
         margin-top: auto;
       }
     </style>
-    <div class="root-div">
+    <div class="root-div" id='root-div'>
       <div class="body-div">
         <h1>${title}</h1>
         <div class="left-footer">
@@ -151,7 +151,7 @@ const openGraphImageCard = (title, tags, author) => {
 // Render the template with some data
 const container =  document.getElementById("container")
 render(
-  myTemplate(
+  openGraphImageCard(
     window.title,
     window.tags,
     window.author

@@ -1,10 +1,8 @@
-import babel from 'rollup-plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import builtins from 'rollup-plugin-node-builtins';
 import globals from 'rollup-plugin-node-globals';
 import replace from '@rollup/plugin-replace'
-import litHtml from 'lit-html'
 
 const config = {
     input: 'src/index.js',
@@ -18,13 +16,7 @@ const config = {
         resolve({
             preferBuiltins: true
         }),
-        babel({
-        }),
-        commonjs({
-            namedExports: {
-                'lit-html': Object.keys(litHtml)
-            }
-        }),
+        commonjs(),
         replace({
             'process.env.NODE_ENV': JSON.stringify('production')
         }),
