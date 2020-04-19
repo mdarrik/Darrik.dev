@@ -10,5 +10,6 @@ module.exports = {
         {"name": "Patreon", "url": "https://www.patreon.com/mdarrik", "icon": "patreon.svg"},
         {"name": "Dev.To", "url": "https://www.dev.to/mdarrik", "icon": "dev-dot-to.svg"}
     ],
-    "year": new Date().getFullYear()
+    "year": new Date().getFullYear(),
+    "url": process.env.URL || 'http://localhost:8080'
 }
