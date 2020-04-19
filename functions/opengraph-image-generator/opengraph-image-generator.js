@@ -69,10 +69,9 @@ exports.handler = async function({UserId, UserAction, queryStringParameters}, fn
             "Content-Type": "image/png",
             "Content-Length": screenshotBuffer.length.toString()
         },
-        body: screenshotBuffer.toString()
+        body: screenshotBuffer.toString('base64')
     }
     honeycombEvent.add({'screenshot-successful': true})
-    await browser.close();
 }catch(err) {
     honeycombEvent.add({'error-message': err.message, 'error-stack': err.stack, 'screenshot-successful': false});
     returnValue.body = err.message
