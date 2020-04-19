@@ -30,7 +30,6 @@ exports.handler = async function({UserId, UserAction, queryStringParameters}, fn
     browser = await playwright.launchChromium();
     const context = await browser._defaultContext;
     const page = await context.newPage();
-    honeycombEvent.add({'pageObject': JSON.stringify(Object.keys(page))});
     page.setViewportSize({
         width: 1200,
         height: 630
@@ -74,7 +73,7 @@ exports.handler = async function({UserId, UserAction, queryStringParameters}, fn
     }
     honeycombEvent.add({'screenshot-successful': true})
 }catch(err) {
-    honeycombEvent.add({...err, 'screenshot-successful': false});
+    honeycombEvent.add({'error-message': err.message, 'error-stack': err.stack, 'screenshot-successful': false});
     returnValue.body = err.message
 }finally {
     if(browser && browser.isConnected()) {
