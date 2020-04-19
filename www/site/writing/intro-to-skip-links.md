@@ -2,6 +2,7 @@
 title: Introduction To Skip Links
 tags: ["accessibility", "skip links"]
 order: 0
+description: "Find out about skip links and why they're important. Also look into implementing your first one."
 ---
 
 # Introduction To Skip Links

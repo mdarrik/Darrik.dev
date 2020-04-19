@@ -1,6 +1,7 @@
 ---
 isMarkdown: false
 includeNewsletterForm: true
+description: "Web Dev, Accessibility Specialist, Doing My Best to Make the Web Inclusive"
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -11,10 +12,20 @@ includeNewsletterForm: true
     <meta name="twitter:site" content="@mdarrik" />
     <meta name="twitter:creator" content="@mdarrik" />
     <meta name="twitter:title" content="{{title}}" />
+    <meta name="og:title" content="{{title}}" />
     <meta name="twitter:description" content="{{description}}" />
+    <meta name="og:description" content="{{description}}" /> 
     <meta 
         name="twitter:image"
         content="{{siteMetadata.url}}/.netlify/functions/opengraph-image-generator?title={{title | urlencode}}&author={{"@mdarrik"| urlencode}}{%if tags %}&tags={{tags | join(",") | urlencode}}{%endif%}"
+    />
+    <meta 
+        name="og:image"
+        content="{{siteMetadata.url}}/.netlify/functions/opengraph-image-generator?title={{title | urlencode}}&author={{"Darrik Moberg" | urlencode}}{%if tags %}&tags={{tags | join(",") | urlencode}}{%endif%}"    
+    />
+    <meta
+        name="og:url"
+        content="{{siteMetadata.url}}"
     />
     <link rel="icon" href="/images/DM-icon.png" />
     <style>{%include 'assets/global.processed.css'%}</style>
