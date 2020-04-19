@@ -11,5 +11,6 @@ module.exports = {
         {"name": "Dev.To", "url": "https://www.dev.to/mdarrik", "icon": "dev-dot-to.svg"}
     ],
     "year": new Date().getFullYear(),
-    "url": process.env.DEPLOY_PRIME_URL || 'http://localhost:8080'
+    // if from pull request, set prime_url, otherwise set site base url. fallback to localhost
+    "url": (process.env.PULL_REQUEST ? process.env.DEPLOY_PRIME_URL : process.env.URL) || 'http://localhost:8080'
 }
