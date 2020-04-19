@@ -7,7 +7,7 @@ const honeycomb = new libHoney({
     dataset: process.env.HONEYCOMB_DATA_SET,
 })
 
-exports.handler = async function({queryStringParameters}, fnContext) {
+exports.handler = async function({UserId, UserAction, queryStringParameters}, fnContext) {
     //Honeycomb Init
     const honeycombEvent = honeycomb.newEvent()
     //add some function-level info.
@@ -15,8 +15,8 @@ exports.handler = async function({queryStringParameters}, fnContext) {
         functionName: fnContext.functionName,
         functionVersion: fnContext.functionVersion,
         requestId: fnContext.awsRequestId,
-        userId: event.UserId,
-        userAction: event.UserAction,
+        userId: UserId,
+        userAction: UserAction,
         queryStringParameters: JSON.stringify(queryStringParameters)
     })
     // initialize the browser variable and the return value
