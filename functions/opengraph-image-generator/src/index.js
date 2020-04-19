@@ -100,7 +100,9 @@ const openGraphImageCard = (title, tags, author) => {
         position: absolute;
       }
       .body-div {
-        margin: 1rem;
+        padding: 1rem;
+        height: 100%;
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 9fr 1fr;
