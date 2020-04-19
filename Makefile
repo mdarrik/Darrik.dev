@@ -2,6 +2,7 @@ buildSite: package.json
 	NODE_ENV=production yarn workspace www build
 	cd functions/newsletter-signup && yarn
 	cd functions/opengraph-image-generator && yarn && yarn build
+	cd functions/process-cloudinary-image && yarn
 install: package.json
 	yarn
 subsetFont:

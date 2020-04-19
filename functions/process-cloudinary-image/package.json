@@ -1,0 +1,14 @@
+{
+  "name": "process-cloudinary-image",
+  "version": "1.0.0",
+  "description": "Used to create + cache og images",
+  "main": "index.js",
+  "repository": "https://github.com/mdarrik/darrik.dev",
+  "author": "Darrik Moberg",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "cloudinary": "^1.21.0",
+    "libhoney": "^2.0.2"
+  }
+}

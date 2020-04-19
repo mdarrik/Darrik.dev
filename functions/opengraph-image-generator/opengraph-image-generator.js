@@ -46,11 +46,12 @@ exports.handler = async function({UserId, UserAction, queryStringParameters}, fn
         </html>
     `);
     const tags = queryStringParameters.tags ? decodeURIComponent(queryStringParameters.tags).split(",") : [];
+    console.log(decodeURIComponent(queryStringParameters.author))
     await page.addScriptTag({
         content: `
-            window.title = "${queryStringParameters.title || "No Title"}"
+            window.title = "${decodeURIComponent(queryStringParameters.title) || "No Title"}"
             window.tags = ${JSON.stringify(tags)};
-            window.author = "${queryStringParameters.author || ''}";
+            window.author = "${decodeURIComponent(queryStringParameters.author) || ''}";
         `
     })
     await page.addScriptTag({

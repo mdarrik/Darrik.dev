@@ -17,11 +17,11 @@ description: "Web Dev, Accessibility Specialist, Doing My Best to Make the Web I
     <meta name="og:description" content="{{description}}" /> 
     <meta 
         name="twitter:image"
-        content="{{siteMetadata.url}}/.netlify/functions/opengraph-image-generator?title={{title | urlencode}}&author={{"@mdarrik"| urlencode}}{%if tags %}&tags={{tags | join(",") | urlencode}}{%endif%}"
+        content="{{siteMetadata.url}}/opengraph?title={{title | urlencode}}&author={{"@mdarrik"| urlencode}}{%if tags %}&tags={{tags | join(",") | urlencode}}{%endif%}"
     />
     <meta 
         name="og:image"
-        content="{{siteMetadata.url}}/.netlify/functions/opengraph-image-generator?title={{title | urlencode}}&author={{"Darrik Moberg" | urlencode}}{%if tags %}&tags={{tags | join(",") | urlencode}}{%endif%}"    
+        content="{{siteMetadata.url}}/opengraph?title={{title | urlencode}}&author={{"Darrik Moberg" | urlencode}}{%if tags %}&tags={{tags | join(",") | urlencode}}{%endif%}"    
     />
     <meta
         name="og:url"
