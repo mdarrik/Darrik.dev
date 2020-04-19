@@ -28,7 +28,7 @@ exports.handler = async function({UserId, UserAction, queryStringParameters}, fn
     try {
     
     browser = await playwright.launchChromium();
-    const context = await browser._defaultContext();
+    const context = await browser._defaultContext;
     const page = await context.newPage();
     page.setViewportSize({
         width: 1200,
