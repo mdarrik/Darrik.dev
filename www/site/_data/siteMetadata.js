@@ -12,6 +12,5 @@ module.exports = {
     ],
     "year": new Date().getFullYear(),
     // if from pull request, set prime_url, otherwise set site base url. fallback to localhost
-    "url": (process.env.PULL_REQUEST ? process.env.DEPLOY_PRIME_URL : process.env.URL) || 'http://localhost:8080',
-    "isPR": process.env.PULL_REQUEST
+    "url": (process.env.PULL_REQUEST ? process.env.DEPLOY_PRIME_URL : process.env.URL) || 'http://localhost:8080'
 }

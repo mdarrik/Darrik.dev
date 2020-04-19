@@ -1,4 +1,5 @@
 require('dotenv').config();
+console.log(process.env.PULL_REQUEST ? process.env.DEPLOY_PRIME_URL : process.env.URL)
 
 function getAccentBorderColor(color='') {
   const accentBorderColors = ['border-red-600', 'border-blue-600', 'border-green-600', 'border-teal-600'];
