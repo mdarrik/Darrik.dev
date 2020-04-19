@@ -11,5 +11,5 @@ module.exports = {
         {"name": "Dev.To", "url": "https://www.dev.to/mdarrik", "icon": "dev-dot-to.svg"}
     ],
     "year": new Date().getFullYear(),
-    "url": process.env.URL || 'http://localhost:8080'
+    "url": process.env.DEPLOY_PRIME_URL || 'http://localhost:8080'
 }
