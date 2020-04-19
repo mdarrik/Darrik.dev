@@ -74,6 +74,7 @@ exports.handler = async function({UserId, UserAction, queryStringParameters}, fn
     honeycombEvent.add({'screenshot-successful': true})
 }catch(err) {
     honeycombEvent.add({...err, 'screenshot-successful': false});
+    returnValue.body = err.message
 }finally {
     if(browser && browser.isConnected()) {
         await browser.close()
