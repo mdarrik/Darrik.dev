@@ -30,6 +30,7 @@ exports.handler = async function({UserId, UserAction, queryStringParameters}, fn
     browser = await playwright.launchChromium();
     const context = await browser._defaultContext;
     const page = await context.newPage();
+    honeycombEvent.add(JSON.stringify(page));
     page.setViewportSize({
         width: 1200,
         height: 630
