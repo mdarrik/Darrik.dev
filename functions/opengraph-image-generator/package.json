@@ -11,7 +11,7 @@
     "libhoney": "^2.0.2",
     "lit-html": "^1.2.1",
     "playwright-aws-lambda": "^0.4.0",
-    "playwright-core": "^0.13.0"
+    "playwright-core": "^0.11.1"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.1.0",
