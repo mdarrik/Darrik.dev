@@ -29,44 +29,45 @@ description: "Web Dev, Accessibility Specialist, Doing My Best to Make the Web I
         content="{{siteMetadata.url}}"
     />
     <link rel="icon" href="/images/DM-icon.png" />
-    <style>{%include 'assets/global.processed.css'%}</style>
+    {# <style>{%include 'assets/global.processed.css'%}</style> #}
+    <style>{{'_includes/global.css' | postcss | safe }}</style>
      <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/subfont/Fira_Sans-400-9d7e1e256d.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/subfont/Fredericka_the_Great-400-181cba1a4a.woff2"><script async>try{new FontFace('Fira Sans__subset',"url(/subfont/Fira_Sans-400-9d7e1e256d.woff2) format('woff2'), url(/subfont/Fira_Sans-400-767cd7ce7f.woff) format('woff')",{}).load(),new FontFace('Fredericka the Great__subset',"url(/subfont/Fredericka_the_Great-400-181cba1a4a.woff2) format('woff2'), url(/subfont/Fredericka_the_Great-400-edc6e87de8.woff) format('woff')",{}).load()}catch(e){}</script><style>@font-face{font-display:swap;font-family:Fira Sans__subset;font-stretch:normal;font-style:normal;font-weight:400;src:url(/subfont/Fira_Sans-400-9d7e1e256d.woff2) format("woff2"),url(/subfont/Fira_Sans-400-767cd7ce7f.woff) format("woff");unicode-range:U+64-7a,U+a9,U+20-22,U+26-29,U+2c-2e,U+30-3a,U+3f,U+41-52,U+2014,U+53-5a,U+61-63}@font-face{font-display:swap;font-family:Fredericka the Great__subset;font-stretch:normal;font-style:normal;font-weight:400;src:url(/subfont/Fredericka_the_Great-400-181cba1a4a.woff2) format("woff2"),url(/subfont/Fredericka_the_Great-400-edc6e87de8.woff) format("woff");unicode-range:U+64-7a,U+20,U+27,U+30-39,U+41-52,U+2014,U+53-5a,U+61-63}</style>
     {%if isMarkdown %}
     <link rel="stylesheet" href="/prism-a11y-dark.css" />
     {%endif%}
     <title>{{title}} | Darrik.dev</title>
 </head>
-<body class="min-h-screen flex flex-col items-stretch">
+<body class="flex flex-column items-stretch">
     <a href="#main" class="visually-hidden flex-none text-blue-800 bg-red-100 underline">
         Skip to main content
     </a>
-    <header class="bg-white px-2 mb-2 flex justify-between  content-center border-t-4  border-blue-600 text-lg">
-        <span class="hidden md:inline">
-            <a href="/" class="font-decorative text-black border-b-0">
-                Darrik Moberg
+    <header class="px-2 mb-4">
+            <a href="/" class="branding">
+                Darrik <span class="d-none md:inline;">Moberg</span>
             </a>
-        </span>
-        <nav class="w-full md:w-auto">
-            <ul class="flex content-between w-full justify-evenly md:justify-start">
-                <li class="mr-2 md:mx-4">
+        <nav>
+            <ul class="nav-list">
+                <li>
                     <a href="/"
-                        class="text-black border-b-0 h-12 inline-block px-2 {% if page.url == '/for-hire/' %} text-green-700 p-0 underline{%endif%}"
+                        class="inline-block px-2 {% if page.url == '/for-hire/' %} active {%endif%}"
                         {%if page.url == '/'%}aria-current="page" {%endif%}>Home</a>
                 </li> 
-                <li class="mr-2 md:mx-4"><a href="/writing/"
+                <li><a href="/writing/"
                         class="text-black border-b-0 h-12 inline-block px-2 {{ 'text-green-700 p-0 underline' | conditionalContains(page.url, '/writing/') }}"
                         {%if page.url == '/writing/'%}aria-current="page" {%endif%}>Writing</a></li>
-                <li class="mr-2 md:mx-4"><a href="/for-hire/"
+                <li><a href="/for-hire/"
                         class="text-black border-b-0 h-12 inline-block px-2 {% if page.url == '/for-hire/' %} text-green-700 p-0 underline {%endif%}"
                         {%if page.url == '/for-hire/'%}aria-current="page" {%endif%}>Hire Me</a>
                 </li>
-                <li class="md:mx-4">
+                <li>
                     <a href="https://www.github.com/mdarrik" class="border-b-0 text-black w-12 h-12 md:w-auto inline-block text-center">
+                    <div class="inline">
                         <svg class="w-4 h-4 inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16">
                             <path
                                 d="M16 .4a16 16 0 00-5 31.2c.7.1 1-.4 1-.8v-3c-4.4 1-5.4-1.9-5.4-1.9-.7-1.8-1.8-2.3-1.8-2.3-1.4-1 .2-1 .2-1 1.6.1 2.4 1.7 2.4 1.7 1.4 2.4 3.8 1.7 4.7 1.3a3 3 0 011-2.1c-3.6-.4-7.3-1.8-7.3-8 0-1.7.6-3.1 1.6-4.2-.1-.4-.7-2 .2-4.3 0 0 1.3-.4 4.4 1.7a15.4 15.4 0 018 0C23 6.6 24.4 7 24.4 7c.9 2.2.3 3.9.2 4.3 1 1 1.6 2.5 1.6 4.3 0 6.1-3.7 7.5-7.3 7.9.6.4 1 1.4 1 3v4.3c0 .4.4 1 1.2.8A16 16 0 0016 .4z" />
                             </svg>
-                        <span class="visually-hidden md:not-visually-hidden">GitHub</span>
+                        <span>GitHub</span>
+                    </div>
                     </a>
                 </li>
             </ul>
@@ -75,7 +76,7 @@ description: "Web Dev, Accessibility Specialist, Doing My Best to Make the Web I
     <main id="main" class="flex-grow px-8 scroll-margin-top-8">
         {{content | safe}}
     </main>
-    <footer class="mt-8 py-1 flex flex-col items-center">
+    <footer class="mt-8 py-1 flex flex-column items-center">
         {% if includeNewsletterForm  %}
             {% include 'email-form.html'%}
         {% endif %}

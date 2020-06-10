@@ -1,0 +1,26 @@
+.newsletter-form {
+    @extend %card-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media (min-width: 48rem) {
+        max-width: 80%;
+    }
+    @media (min-width: 64rem) {
+        max-width: 65%;
+    }
+    & input {
+        border: 2px solid var(--horizon-blue);
+        color: var(--night-sky);
+        border-radius: var(--border-radius);
+        width: 8rem;
+    }
+    & button {
+        border: none;
+        background: var(--cotton-candy-blue);
+        border-radius: var(--border-radius);
+        width: 8rem;
+
+    }
+}
