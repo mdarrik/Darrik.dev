@@ -1,0 +1,39 @@
+header {
+    background-color: var(--nav-background);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-2);
+    & a {
+        text-decoration: none;
+        color: var(--text-color);
+        min-height: 2.75rem;
+        min-width: 2.75rem;
+        display: flex;
+        align-items: center;
+    }
+    & .branding {
+        font-family: var(--font-decorative);
+        font-size: var(--font-2xl);
+
+    }
+    & ul[class] {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        display: flex;
+        justify-content: end;
+        @media(min-width: 40rem) {
+            gap: var(--space-4);
+            justify-content: space-between;
+        }
+        @media (min-width: 48rem) {
+            justify-content: space-between;
+            gap: var(--space-8);
+            font-size: var(--font-xl);
+            margin-inline-end: var(--space-4);
+        }
+    }
+    & li {
+        flex: none;
+    }
+}

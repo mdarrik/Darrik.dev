@@ -1,4 +1,5 @@
 require('dotenv').config();
+const postCssFilter = require('./utils/postCss-filter')
 
 function getAccentBorderColor(color='') {
   const accentBorderColors = ['border-red-600', 'border-blue-600', 'border-green-600', 'border-teal-600'];
@@ -45,6 +46,7 @@ module.exports = function(eleventyConfig) {
     })
     eleventyConfig.addFilter("log", (content) => { console.log(content)})
     eleventyConfig.addFilter("accent-border-color", getAccentBorderColor)
+    eleventyConfig.addNunjucksAsyncFilter("postcss", postCssFilter)
   return {
     dir: {
       input: "./site/"

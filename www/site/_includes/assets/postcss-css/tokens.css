@@ -1,0 +1,346 @@
+%d-none {
+  display: none;
+}
+%inline {
+  display: inline;
+}
+%block {
+  display: block;
+}
+%flex {
+  display: flex;
+}
+%flex-column {
+  flex-direction: column;
+}
+%flex-row {
+  flex-direction: row;
+}
+%flex-none {
+  flex: none;
+}
+%items-stretch {
+  align-items: stretch;
+}
+%items-start {
+  align-items: flex-start;
+}
+%items-center {
+  align-items: center;
+}
+%items-end {
+  align-items: flex-end;
+}
+%items-baseline {
+  align-items: baseline;
+}
+%justify-start {
+  justify-content: flex-start;
+}
+%justify-center {
+  justify-content: center;
+}
+%justify-end {
+  justify-content: flex-end;
+}
+%justify-between {
+  justify-content: space-between;
+}
+%justify-around {
+  justify-content: space-around;
+}
+
+/*#region display-tokens*/
+.d-none {
+  @extend %d-none;
+}
+.inline {
+  @extend %inline;
+}
+.block {
+  @extend %block;
+}
+.flex {
+  @extend %flex;
+}
+.flex-row {
+  @extend %flex-row;
+}
+.flex-column {
+  @extend %flex-column;
+}
+.flex-none {
+  @extend %flex-none;
+}
+.items-stretch {
+  @extend %items-stretch;
+}
+.items-start {
+  @extend %items-stretch;
+}
+.items-center {
+  @extend %items-center;
+}
+.items-end {
+  @extend %items-end;
+}
+.items-baseline {
+  @extend %items-baseline;
+}
+
+.justify-start {
+  @extend %justify-start;
+}
+.justify-center {
+  @extend %justify-center;
+}
+.justify-end {
+  @extend %justify-end;
+}
+.justify-between {
+  @extend %justify-between;
+}
+.justify-around {
+  @extend %justify-around;
+}
+
+/*#endregion*/
+
+/*#region spaceTokens*/
+@each $space in (0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64)
+{
+  .m-$space {
+    margin: var(--space-$space);
+  }
+  .mx-$space {
+    margin-right: var(--space-$space);
+    margin-left: var(--space-$space);
+  }
+  .my-$space {
+    margin-top: var(--space-$space);
+    margin-bottom: var(--space-$space);
+  }
+  .mr-$space {
+    margin-right: var(--space-$space);
+  }
+  .ml-$space {
+    margin-left: var(--space-$space);
+  }
+  .mt-$space {
+    margin-top: var(--space-$space);
+  }
+  .mb-$space {
+    margin-bottom: var(--space-$space);
+  }
+  .p-$space {
+    padding: var(--space-$space);
+  }
+  .px-$space {
+    padding-right: var(--space-$space);
+    padding-left: var(--space-$space);
+  }
+  .py-$space {
+    padding-top: var(--space-$space);
+    padding-bottom: var(--space-$space);
+  }
+  .pr-$space {
+    padding-right: var(--space-$space);
+  }
+  .pl-$space {
+    padding-left: var(--space-$space);
+  }
+  .pt-$space {
+    padding-top: var(--space-$space);
+  }
+  .pb-$space {
+    padding-bottom: var(--space-$space);
+  }
+}
+/*#endregion*/
+
+/*#region visually-hidden*/
+.visually-hidden {
+  /* https://a11yproject.com/posts/how-to-hide-content/ */
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip-path: rect(1px, 1px, 1px, 1px);
+}
+
+.not-visually-hidden {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: auto;
+  clip: auto;
+  clip-path: none;
+}
+
+.visually-hidden:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: auto;
+  @apply shadow-outline;
+}
+/*#endregion*/
+
+/*#region font-tokens*/
+@each $fontSize, $fontModifier in (var(--font-sizes)), (var(--font-modifiers)) {
+  %text-$fontModifier {
+    font-size: var($fontSize);
+  }
+  .text-$fontModifier {
+    @extend %text-$fontModifier;
+  }
+}
+
+%font-light {
+  font-weight: 300;
+}
+%font-normal {
+  font-weight: 400;
+}
+%font-semibold {
+  font-weight: 600;
+}
+%font-bold {
+  font-weight: 700;
+}
+.font-light {
+  @extend %font-light;
+}
+.font-normal {
+  @extend %font-normal;
+}
+.font-semibold {
+  @extend %font-semibold;
+}
+.font-bold {
+  @extend %font-bold;
+}
+
+/*#region responsive-variants*/
+@each $breakpoint, $bpSize in (var(--breakpoints)), (var(--screen-size)) {
+  @media (min-width: $breakpoint) {
+    .$bpSize\:d-none {
+      @extend %d-none;
+    }
+    .$bpSize\:inline {
+      @extend %inline;
+    }
+    .$bpSize\:block {
+      @extend %block;
+    }
+    .$bpSize\:flex {
+      @extend %flex;
+    }
+    .$bpSize\:flex-row {
+      @extend %flex-row;
+    }
+    .$bpSize\:flex-column {
+      @extend %flex-column;
+    }
+    .$bpSize\:flex-none {
+      @extend %flex-none;
+    }
+    .$bpSize\:items-stretch {
+      @extend %items-stretch;
+    }
+    .$bpSize\:items-start {
+      @extend %items-stretch;
+    }
+    .$bpSize\:items-center {
+      @extend %items-center;
+    }
+    .$bpSize\:items-end {
+      @extend %items-end;
+    }
+    .$bpSize\:items-baseline {
+      @extend %items-baseline;
+    }
+    .$bpSize\:justify-start {
+      @extend %justify-start;
+    }
+    .$bpSize\:justify-center {
+      @extend %justify-center;
+    }
+    .$bpSize\:justify-end {
+      @extend %justify-end;
+    }
+    .$bpSize\:justify-between {
+      @extend %justify-between;
+    }
+    .$bpSize\:justify-around {
+      @extend %justify-around;
+    }
+    @each $space
+      in (0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64)
+    {
+      .$bpSize\:m-$space {
+        margin: var(--space-$space);
+      }
+      .$bpSize\:mx-$space {
+        margin: 0 var(--space-$space);
+      }
+      .$bpSize\:my-$space {
+        margin: var(--space-$space) 0;
+      }
+      .$bpSize\:mr-$space {
+        margin-right: var(--space-$space);
+      }
+      .$bpSize\:ml-$space {
+        margin-left: var(--space-$space);
+      }
+      .$bpSize\:mt-$space {
+        margin-top: var(--space-$space);
+      }
+      .$bpSize\:mb-$space {
+        margin-bottom: var(--space-$space);
+      }
+      .$bpSize\:p-$space {
+        padding: var(--space-$space);
+      }
+      .$bpSize\:px-$space {
+        padding: 0 var(--space-$space);
+      }
+      .$bpSize\:py-$space {
+        padding: var(--space-$space) 0;
+      }
+      .$bpSize\:pr-$space {
+        padding-right: var(--space-$space);
+      }
+      .$bpSize\:pl-$space {
+        padding-left: var(--space-$space);
+      }
+      .$bpSize\:pt-$space {
+        padding-top: var(--space-$space);
+      }
+      .$bpSize\:pb-$space {
+        padding-bottom: var(--space-$space);
+      }
+    }
+    @each $fontSize, $fontModifier in (var(--font-sizes)),
+      (var(--font-modifiers))
+    {
+      .$bpSize\:text-$fontModifier {
+        font-size: var($fontSize);
+      }
+    }
+    .$bpSize\:font-light {
+      @extend %font-light;
+    }
+    .$bpSize\:font-normal {
+      @extend %font-normal;
+    }
+    .$bpSize\:font-semibold {
+      @extend %font-semibold;
+    }
+    .$bpSize\:font-bold {
+      @extend %font-bold;
+    }
+  }
+}
+/*#endregion*/
