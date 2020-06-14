@@ -5,6 +5,10 @@ html {
     font-size: 1rem;
 }
 
+p, span, li, h1, h2, h3, h4, h5, h6, a {
+    max-width: 80ch;
+}
+
 h1,h2,h3,h4,h5,h6 {
     font-family: var(--font-decorative);
 }
