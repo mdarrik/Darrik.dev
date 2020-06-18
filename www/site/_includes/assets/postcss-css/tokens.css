@@ -194,9 +194,10 @@
 /*#endregion*/
 
 /*#region font-tokens*/
-@each $fontSize, $fontModifier in (var(--font-sizes)), (var(--font-modifiers)) {
+@each $fontSize, $fontModifier, $lineHeight in (var(--font-sizes)), (var(--font-modifiers)), (var(--line-heights)) {
   %text-$fontModifier {
     font-size: var($fontSize);
+    line-height: $lineHeight;
   }
   .text-$fontModifier {
     @extend %text-$fontModifier;
@@ -335,7 +336,7 @@
       (var(--font-modifiers))
     {
       .$bpSize\:text-$fontModifier {
-        font-size: var($fontSize);
+        @extend %text-$fontModifier;
       }
     }
     .$bpSize\:font-light {
