@@ -16,6 +16,20 @@ h1,h2,h3,h4,h5,h6 {
     font-family: var(--font-decorative);
 }
 
+h1 {
+    font-size: var(--font-3xl);
+    line-height: 1;
+}
+
+h2 {
+    font-size: var(--font-2xl);
+}
+
+h3 {
+    font-size: var(--font-xl);
+}
+
+
 a {
     color: var(--text-color);
 }
