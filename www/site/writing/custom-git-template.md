@@ -1,7 +1,6 @@
 ---
 title: "Creating a Custom Git Template"
 tags: ["writing", "notes", "git", "cli"]
-order: 3
 description: "Info on creating a custom git template for optimizing my repo preferences!"
 date: "2020-07-01T05:50:08.000Z"
 ---
