@@ -5,7 +5,7 @@ description: "Info on creating a custom git template for optimizing my repo pref
 date: "2020-07-01T05:50:08.000Z"
 ---
 
-# {{Title}}
+# {{title}}
 
 So I want to start this post off by saying language matters. Language can make people feel excluded, and often contributes to overall structural exclusion built into racism and ableism. However, it's also important to realize that changing language is mostly performative if not paired with other active techniques to combat structural exclusion at it's roots. So changing language cannot be the only thing that you do. Take some time to elevate Black voices. If you can, help combat the racist and exclusionary practices in hiring, promoting, and retention that exist in your workplace. Donate money where you can. If you're looking for places to donate, a developer I respect a lot, Prince Wilson, set up a page with information for organizations to support specifically focused around Black Lives Matter and the fight for justice and carceral reform: [https://prince.dev/donate](https://prince.dev/donate). You can also look to find organizations local to where you live to help people directly in your communities. 
 
