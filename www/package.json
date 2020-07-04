@@ -7,9 +7,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "serve": "postcss site/_includes/global.css -o site/_includes/assets/global.processed.css -c && eleventy --serve",
-    "build": "postcss site/_includes/global.css -o site/_includes/assets/global.processed.css -c && eleventy",
-    "compile-css": "postcss site/_includes/global.css -o site/_includes/assets/global.processed.css -c"
+    "serve": "eleventy --serve",
+    "build": "eleventy" 
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
