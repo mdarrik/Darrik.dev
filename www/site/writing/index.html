@@ -4,28 +4,23 @@ layout: layout.njk
 title: Writing
 isMarkdown: true
 ---
-<h1 class="font-semibold md:text-3xl text-2xl mb-3 font-decorative">Things I've Written</h1>
-<h2 id="latest-articles-title" class="font-semibold md:text-2xl text-xl mb-2 font-decorative">Latest Articles</h2>
-<ul aria-labelledby="latest-articles-title">
+<h1 class="font-semibold md:text-3xl text-2xl mb-4 font-decorative">Things I've Written</h1>
+<ul class="post-list">
     {%- for post in collections.writing reversed -%}
-        {%projectCard "li", "border-t-4 mb-4" %}
-            <h3><a href="{{post.fileSlug}}" class="font-decorative inline-block mb-2">{{post.data.title}}</a></h3>
-            {{post.date}}
-                <article class="block">
-                    {{post.templateContent | strip_html | remove_first: post.data.title | truncatewords: 100 }}
-                </article>
-        {%endprojectCard%}
+    <li>
+        <article class="block">
+            <h3><a href="{{post.url | url}}" class="font-decorative inline-block mb-2">{{post.data.title}}</a></h3>    
+            {{post.data.description}}
+        </article>
+    </li>
     {%- endfor -%}
 </ul>
-<h2 class="font-semibold md:text-2xl text-xl mb-2 font-decorative">Find Articles By Topic</h2>
-<h3 id="accessibility-articles" class="font-semibold md:text-xl text-lg mb-2 font-decorative">Accessibility</h2>
-<ul aria-labelledby="accessibility-articles">
-{%- for post in collections.accessibility  -%}
-    {%projectCard "li", "border-t-4 mb-4" %}
-    <h3><a href="{{post.fileSlug}}" class="font-decorative inline-block mb-2">{{post.data.title}}</a></h3>
-    <article class="block">
-    {{post.templateContent | strip_html |remove_first: post.data.title | truncatewords: 100}}
-    </article>
-    {%endprojectCard %}
+<section class="topic-section">
+<h2 id="topic-header" class="font-semibold md:text-2xl text-xl mb-2 font-decorative">Find Articles By Topic</h2>
+{%-assign tags = collections | keys | excludeValue: "all" | excludeValue: "writing" | excludeValue: "notes" | sortAlphabetical  -%}
+<ul aria-labelledby="topic-header">
+{%- for tag in tags-%}
+<li><a href="/{{tag | replace: " ", "-" | urlencode}}" class="text-lg md:text-xl">{{tag | capitalize}}</a></li>
 {%- endfor -%}
 </ul>
+</section>

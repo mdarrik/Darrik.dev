@@ -46,6 +46,13 @@ module.exports = function(eleventyConfig) {
     })
     eleventyConfig.addFilter("log", (content) => { console.log(content)})
     eleventyConfig.addFilter("accent-border-color", getAccentBorderColor)
+    eleventyConfig.addFilter("keys", function(val) {return Object.keys(val)})
+    eleventyConfig.addFilter("excludeValue", function(arr, ValueToExclude) {
+     return arr.filter(item => item != ValueToExclude )
+    })
+    eleventyConfig.addFilter("sortAlphabetical", function(arr) {
+      return arr.sort()
+    })
     eleventyConfig.addNunjucksAsyncFilter("postcss", postCssFilter)
   return {
     dir: {

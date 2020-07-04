@@ -162,6 +162,24 @@
     padding-bottom: var(--space-$space);
   }
 }
+.mx-auto {
+  margin-inline: auto;
+}
+.my-auto {
+  margin-block: auto;
+}
+.ml-auto {
+  margin-inline-start: auto;
+}
+.mr-auto {
+  margin-inline-end: auto;
+}
+.mt-auto {
+  margin-block-start: auto;
+}
+.mb-auto {
+  margin-block-end: auto;
+}
 /*#endregion*/
 
 /*#region visually-hidden*/
