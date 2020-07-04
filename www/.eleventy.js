@@ -20,10 +20,10 @@ module.exports = function(eleventyConfig) {
 
     //shortCodes
     eleventyConfig.addPairedShortcode('h1', (content, className="") => {
-        return `<h1 class="font-semibold md:text-3xl text-2xl font-decorative ${className}">${content}</h1>`
+        return `<h1 class="font-semibold md:text-3xl text-2xl ${className}">${content}</h1>`
     })
     eleventyConfig.addPairedShortcode('h2', (content, className="") => {
-        return `<h2 class="text-xl md:text-2xl font-semibold font-decorative ${className}">${content}</h2>`
+        return `<h2 class="text-xl md:text-2xl font-semibold ${className}">${content}</h2>`
     })
     eleventyConfig.addShortcode("blog-series", (collection, title, pageUrl, borderColor) => {
       const sortedCollection = collection.sort((firstEl, secondEl ) => firstEl.data.order - secondEl.data.order)
