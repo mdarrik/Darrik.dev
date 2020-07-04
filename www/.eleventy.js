@@ -23,7 +23,7 @@ module.exports = function(eleventyConfig) {
         return `<h1 class="font-semibold md:text-3xl text-2xl font-decorative ${className}">${content}</h1>`
     })
     eleventyConfig.addPairedShortcode('h2', (content, className="") => {
-        return `<h2 class="mb-3 text-xl font-semibold font-decorative ${className}">${content}</h2>`
+        return `<h2 class="text-xl md:text-2xl font-semibold font-decorative ${className}">${content}</h2>`
     })
     eleventyConfig.addPairedShortcode("projectCard", (content,
         el = 'div', className = "", color) => {
