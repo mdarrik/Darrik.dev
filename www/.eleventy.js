@@ -25,10 +25,6 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPairedShortcode('h2', (content, className="") => {
         return `<h2 class="text-xl md:text-2xl font-semibold font-decorative ${className}">${content}</h2>`
     })
-    eleventyConfig.addPairedShortcode("projectCard", (content,
-        el = 'div', className = "", color) => {
-            return `<${el} class="shadow-lg px-4 pb-2 ${className.trim()} ${getAccentBorderColor(color)}">${content}</${el}>`
-    })
     eleventyConfig.addShortcode("blog-series", (collection, title, pageUrl, borderColor) => {
       const sortedCollection = collection.sort((firstEl, secondEl ) => firstEl.data.order - secondEl.data.order)
       const listElements = sortedCollection.map((post) => {

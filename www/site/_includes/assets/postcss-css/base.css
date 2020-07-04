@@ -46,9 +46,9 @@ input {
 }
 
 ul.post-list {
-    margin-block-end: var(--space-8);
+    margin-block-end: var(--space-12);
     & li {
-        margin-block-end: var(--space-4);
+        margin-block-end: var(--space-6);
     }
 }
 

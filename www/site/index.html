@@ -18,58 +18,15 @@ title: Home
     to building accessibility-first tools and products.
   </p>
 <section class="mb-4">
-  <h2 class="mb-2 text-xl md:text-2xl font-semibold font-decorative">
-    Things I've Made
-  </h2>
-  <ul class="md:px-8">
-      {% projectCard "li", "border-t-4 mb-8", "red" %}
-        <h3 class="text-lg mb-2">
-          <a href="https://sharktank-collaboration-presentation.netlify.com">
-            IT Shark Tank Presentation
-          </a>    
-        </h3>
-        <p class="flex flex-col">
-          <span>
-            My employer started a version of "Shark Tank" where employees
-            could pitch ideas directly to IT management. I pitched an idea to
-            improve collaboration and communication in the division by using a
-            forum to centralize knowledge. Two other people submitted similar
-            ideas, so they grouped us together. To help make our presentation
-            stand out, I spun up a quick site using{{" "}}
-            <a href="https://vuejs.org">Vue</a>,{{" "}}
-            <a href="https://vuetifyjs.com">Vuetify</a>, &amp; hosted it with{{" "}}
-            <a href="https://www.netlify.com/">Netlify</a>. This site served
-            as the slideshow for our presentation and was a big hit among both
-            the "Sharks" and the 2 peers I presented with.
-          </span>
-          <span class="self-center">
-            <a href="https://github.com/mdarrik/sharktank-collaboration-presentation">
-              See Code
-            </a>
-          </span>
-        </p>
-      {% endprojectCard %}
-      {% projectCard "li", "border-t-4", "teal" %}
-        <h3 class="text-lg mb-2">
-          <a href="https://soundboard.darrik.dev">Gatsby Theme Soundboard</a>
-        </h3>
-        <p class="flex flex-col">
-          <span>
-            This is my first Gatsby Theme. It was inspired by a twitter
-            conversation I had with Sarah Drasner and Jason Lengstorf. It
-            creates an accessible soundboard on any site. It allows the sounds
-            to trigger side effects (such as lambda functions) when a button
-            is pressed.
-          </span>
-          <span class="self-center">
-            <a
-              href="https://github.com/mdarrik/gatsby-static-comments"
-              class="self-center"
-            >
-              See Code
-            </a>
-          </span>
-        </p>
-      {% endprojectCard %}
+  {%h2 "mb-4"%} Some things I've written{%endh2%}
+  <ul class="post-list mx-2">
+  {%-for post in collections.writing-%}
+  <li>
+  <article>
+  <h3 class="text-lg md:text-xl font-decorative font-semibold">{{post.data.title}}</h3>
+  {{post.data.description}}
+  </article>
+  </li>
+  {%-endfor-%}
   </ul>
 </section>
