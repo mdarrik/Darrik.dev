@@ -3,14 +3,22 @@
   command = "make buildSite"
   functions = "functions"
   publish = "www/_site"
-  
+
   ## (optional) Settings for Netlify Dev
   ## https://github.com/netlify/netlify-dev-plugin#project-detection
-  [dev] 
-   command = "yarn workspace www serve" # Command to start your dev server
-   publish = "www/_site" # Folder with the static content for _redirect file
-   targetPort = 8080
-   port = 8082
-   framework = "#custom"
+
+[[headers]]
+  for = "/*"
+  [headers.value]
+    Content-Security-Policy = "default-src 'self';"
+    X-Frame-Options = "Deny;"
+    X-Content-Type = "nosniff;"
+
+[dev] 
+  command = "yarn workspace www serve" # Command to start your dev server
+  publish = "www/_site" # Folder with the static content for _redirect file
+  targetPort = 8080
+  port = 8082
+  framework = "#custom"
   
   ## more info on configuring this file: https://www.netlify.com/docs/netlify-toml-reference/ 
