@@ -20,6 +20,7 @@
     "dotenv": "^8.2.0",
     "postcss-cli": "^7.1.0",
     "postcss-extend": "^1.0.5",
+    "postcss-logical": "^4.0.2",
     "purgecss": "^2.1.0",
     "tailwindcss": "^1.2.0"
   },

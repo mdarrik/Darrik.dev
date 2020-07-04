@@ -9,6 +9,7 @@ const postCssExtend = require('postcss-extend')
 const postCssAtRules = require('postcss-at-rules-variables')
 const autoprefixer = require('autoprefixer')
 const cssNano = require('cssnano')
+const postCssLogical = require('postcss-logical')
 
 const purgeCSS = purgeCssFunction({
     content: [
@@ -25,7 +26,10 @@ const purgeCSS = purgeCssFunction({
 module.exports = async function(cssFile, callback) {
     const cssFilePath = path.join('./site/', cssFile);
     const rawCss = await fs.readFile(cssFilePath);
-    return await postCss([ postCssImport({plugins: [postCssAtRules]}), postCssAtRules({preserve: false}), postCssEach(), postCssExtend(), postCssNesting(),
+    return await postCss([ postCssImport({plugins: [postCssAtRules]}), postCssAtRules({preserve: false}), postCssEach(), postCssExtend(), postCssNesting(), postCssLogical({
+        dir: 'ltr',
+        preserve: true
+    }),
         ...process.env.NODE_ENV === 'production'
             ? [purgeCSS, cssNano({preset: 'default'})]
             : [],
