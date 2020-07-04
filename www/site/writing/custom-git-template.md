@@ -1,7 +1,7 @@
 ---
 title: "Creating a Custom Git Template"
-tags: ["writing", "notes", "git", "cli"]
-description: "Info on creating a custom git template for optimizing my repo preferences!"
+tags: ["writing", "git"]
+description: "How to create a custom git template. Useful for changing the initial branch name, creating an exclude file, and more."
 date: "2020-07-01T05:50:08.000Z"
 ---
 
@@ -11,7 +11,7 @@ So I want to start this post off by saying language matters. Language can make p
 
 As people started discussing changing the language of git repos to move away from the term Master branch, which has at least some roots in the "Master/Slave" terminology used in other places in tech, people began creating tools to make this easier. Chris Dickinson created an npx script for defaulting the initial branch on new git repos to "latest" instead, ["git-the-latest"](https://github.com/chrisdickinson/git-the-latest). I liked the idea, but wanted to use "main" instead, because it makes more sense to me. So I forked it. In doing so, I learned about git-templates and realized I could use them to more fully customize my own git repos. Currently, I've only set up a custom exclude file and re-mapped my default branch's name to "main". There's definitely more that can be done, and I'll try and update this article and my repo as I find more things I might want to include. 
 
-You can see the code here: https://github.com/mdarrik/git-template
+You can see the code here: [https://github.com/mdarrik/git-template](https://github.com/mdarrik/git-template)
 
 
 ## git-template directory 
@@ -35,13 +35,13 @@ For managing git templates across machines, I can image 2 ways to do it.
 
 To rename the default branch from "master" to "main" (or whatever you choose), you will need to add a "HEAD" file to your template. This file tells git what branch you're currently on. In an empty git repo, we can use it to tell git what to call the branch that gets created when we add our first commit. The file has one line that looks like this: 
 
-```
+```git
 ref: refs/heads/branch-name
 ```
 
 This tells git that the "ref" for the current branch can be found at "refs/heads/branch-name". In my case, I want my default branch to be "main". So my template HEAD file looks like this: 
 
-```
+```git
 ref: refs/heads/main
 ```
 

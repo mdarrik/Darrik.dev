@@ -1,4 +1,5 @@
 require('dotenv').config();
+const postCssFilter = require('./utils/postCss-filter')
 
 function getAccentBorderColor(color='') {
   const accentBorderColors = ['border-red-600', 'border-blue-600', 'border-green-600', 'border-teal-600'];
@@ -19,14 +20,10 @@ module.exports = function(eleventyConfig) {
 
     //shortCodes
     eleventyConfig.addPairedShortcode('h1', (content, className="") => {
-        return `<h1 class="font-semibold md:text-3xl text-2xl font-decorative ${className}">${content}</h1>`
+        return `<h1 class="font-semibold md:text-3xl text-2xl ${className}">${content}</h1>`
     })
     eleventyConfig.addPairedShortcode('h2', (content, className="") => {
-        return `<h2 class="mb-3 text-xl font-semibold font-decorative ${className}">${content}</h2>`
-    })
-    eleventyConfig.addPairedShortcode("projectCard", (content,
-        el = 'div', className = "", color) => {
-            return `<${el} class="shadow-lg px-4 pb-2 ${className.trim()} ${getAccentBorderColor(color)}">${content}</${el}>`
+        return `<h2 class="text-xl md:text-2xl font-semibold ${className}">${content}</h2>`
     })
     eleventyConfig.addShortcode("blog-series", (collection, title, pageUrl, borderColor) => {
       const sortedCollection = collection.sort((firstEl, secondEl ) => firstEl.data.order - secondEl.data.order)
@@ -45,6 +42,14 @@ module.exports = function(eleventyConfig) {
     })
     eleventyConfig.addFilter("log", (content) => { console.log(content)})
     eleventyConfig.addFilter("accent-border-color", getAccentBorderColor)
+    eleventyConfig.addFilter("keys", function(val) {return Object.keys(val)})
+    eleventyConfig.addFilter("excludeValue", function(arr, ValueToExclude) {
+     return arr.filter(item => item != ValueToExclude )
+    })
+    eleventyConfig.addFilter("sortAlphabetical", function(arr) {
+      return arr.sort()
+    })
+    eleventyConfig.addNunjucksAsyncFilter("postcss", postCssFilter)
   return {
     dir: {
       input: "./site/"

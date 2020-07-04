@@ -4,22 +4,22 @@ title: For Hire
 ---
 
 {%h1 "mb-1" %}I'm looking for work{%endh1%}
-<span class="block mb-4 md:mb-2">
+<span class="block mb-4">
     I'm currently seeking a new full-time position and am also available for
         some freelance/consulting opportunities.
 </span>
-{%projectCard "section", "border-t-4 mb-8", "green"%}
+<section class="work-section">
     {%h2%}Full Time Work{%endh2%}
-    I'm currently looking for my next employment opportunity. I'm working
-            for a position that is...
-        <ul class="list-disc list-inside mb-2 px-2">
+    <span id="full-time-descriptor">I'm currently looking for my next employment opportunity. I'm looking
+            for a position that is...</span>
+        <ul aria-labelledby="full-time-descriptor">
             <li>remote or in Washington State or Portland</li>
             <li>a front-end or fullstack position </li>
             <li>with a team that values accessibility</li>
             <li>with a team that has a strong growth mindset</li>
         </ul>
-        It's even better if I can...
-        <ul class="list-disc list-inside mb-2 px-2">
+        <span id="bonus-descriptor">It's even better if I can...</span>
+        <ul>
             <li>write/contribute to open source software</li>
             <li>have a chance to attend conferences</li>
             <li>get paid to work on personal projects and/or learning opportunities</li>
@@ -29,12 +29,12 @@ title: For Hire
         If you know of such a position, feel free to reach out to me on{{" "}}
         <a href="https://www.linkedin.com/in/darrikmoberg/">LinkedIn</a> or{{" "}}
         <a href="https://www.twitter.com/mdarrik">Twitter</a>!
-{%endprojectCard%}
-{%projectCard "section", "border-t-4", "blue" %}
+    </section>
+    <section class="work-section">
     {%h2%}Freelance/Consulting{%endh2%}
         In addition to fulltime work, I can be contracted to provide the
         following services:
-        <ul class="list-disc list-inside mb-2 px-2">
+        <ul>
           <li>web development</li>
           <li>Vue or React development</li>
           <li>Gatsby Theme development</li>
@@ -47,4 +47,4 @@ title: For Hire
         reach out to me on{{" "}}
         <a href="https://www.linkedin.com/in/darrikmoberg/">LinkedIn</a> or{{" "}}
         <a href="https://www.twitter.com/mdarrik">Twitter</a>.
-{%endprojectCard%}
+        </section>

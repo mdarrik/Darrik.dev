@@ -10,70 +10,23 @@ title: Home
     </span>
   </h1>
 </div>
-<div class="d-flex justify-center">
-  <div class="shadow-lg mb-8 border-t-4 border-green-600 md:mx-8 md:px-8 px-2 pb-4 pt-2 mb-4">
-    <p class="ml-2">
-      I have a life sciences background and am currently working in the
-      public sector. I mostly code using web &amp; backend technologies. I
-      enjoy working on user-centric products and using technology to
-      streamline user experiences and workflows. I'm also strongly committed
-      to building accessibility-first tools and products.
-    </p>
-  </div>
-</div>
+  <p class="mb-6">
+    I have a life sciences background and am currently working in the
+    public sector. I mostly code using web &amp; backend technologies. I
+    enjoy working on user-centric products and using technology to
+    streamline user experiences and workflows. I'm also strongly committed
+    to building accessibility-first tools and products.
+  </p>
 <section class="mb-4">
-  <h2 class="mb-4 text-xl font-semibold font-decorative">
-    Things I've Made
-  </h2>
-  <ul class="md:px-8">
-      {% projectCard "li", "border-t-4 mb-8", "red" %}
-        <h3 class="text-lg mb-2">
-          <a href="https://sharktank-collaboration-presentation.netlify.com">
-            IT Shark Tank Presentation
-          </a>    
-        </h3>
-        <p class="flex flex-col">
-          <span>
-            My employer started a version of "Shark Tank" where employees
-            could pitch ideas directly to IT management. I pitched an idea to
-            improve collaboration and communication in the division by using a
-            forum to centralize knowledge. Two other people submitted similar
-            ideas, so they grouped us together. To help make our presentation
-            stand out, I spun up a quick site using{{" "}}
-            <a href="https://vuejs.org">Vue</a>,{{" "}}
-            <a href="https://vuetifyjs.com">Vuetify</a>, &amp; hosted it with{{" "}}
-            <a href="https://www.netlify.com/">Netlify</a>. This site served
-            as the slideshow for our presentation and was a big hit among both
-            the "Sharks" and the 2 peers I presented with.
-          </span>
-          <span class="self-center">
-            <a href="https://github.com/mdarrik/sharktank-collaboration-presentation">
-              See Code
-            </a>
-          </span>
-        </p>
-      {% endprojectCard %}
-      {% projectCard "li", "border-t-4", "teal" %}
-        <h3 class="text-lg mb-2">
-          <a href="https://soundboard.darrik.dev">Gatsby Theme Soundboard</a>
-        </h3>
-        <p class="flex flex-col">
-          <span>
-            This is my first Gatsby Theme. It was inspired by a twitter
-            conversation I had with Sarah Drasner and Jason Lengstorf. It
-            creates an accessible soundboard on any site. It allows the sounds
-            to trigger side effects (such as lambda functions) when a button
-            is pressed.
-          </span>
-          <span class="self-center">
-            <a
-              href="https://github.com/mdarrik/gatsby-static-comments"
-              class="self-center"
-            >
-              See Code
-            </a>
-          </span>
-        </p>
-      {% endprojectCard %}
+  {%h2 "mb-4"%} Some things I've written{%endh2%}
+  <ul class="post-list mx-2">
+  {%-for post in collections.writing-%}
+  <li>
+  <article>
+  <h3 class="text-regular md:text-xl font-decorative font-semibold">{{post.data.title}}</h3>
+  {{post.data.description}}
+  </article>
+  </li>
+  {%-endfor-%}
   </ul>
 </section>
