@@ -9,7 +9,7 @@
 
 [[headers]]
   for = "/*"
-  [headers.value]
+  [headers.values]
     Content-Security-Policy = "default-src 'self';"
     X-Frame-Options = "Deny;"
     X-Content-Type = "nosniff;"
