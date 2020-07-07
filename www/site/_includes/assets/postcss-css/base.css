@@ -8,6 +8,10 @@ body {
     line-height: 1.6;
 }
 
+a:focus, a:hover, button:focus, button:hover, input:focus, input:hover {
+    outline: dashed 0.125rem  var(--text-color);
+}
+
 p, span, li, h1, h2, h3, h4, h5, h6, a {
     max-width: 80ch;
 }
