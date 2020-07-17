@@ -8,9 +8,7 @@
   ## https://github.com/netlify/netlify-dev-plugin#project-detection
 
 [[plugins]]
-package = "netlify-plugin-csp-hash"
-[[plugins]]
-package= "@netlify/plugin-local-install-core"
+package = "netlify-plugin-csp-headers"
 
 [[headers]]
   for = "/*"
