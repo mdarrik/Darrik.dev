@@ -29,7 +29,6 @@
     "tailwindcss": "^1.2.0"
   },
   "dependencies": {
-    "modern-css-reset": "^1.1.0",
-    "netlify-plugin-csp-headers": "^0.0.1-alpha"
+    "modern-css-reset": "^1.1.0"
   }
 }
