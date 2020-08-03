@@ -2794,10 +2794,10 @@ neo-async@^2.6.0:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
-netlify-plugin-csp-headers@^0.0.1-alpha.5:
-  version "0.0.1-alpha.5"
-  resolved "https://registry.yarnpkg.com/netlify-plugin-csp-headers/-/netlify-plugin-csp-headers-0.0.1-alpha.5.tgz#48f147c0ad92fec5ea88105c9a79676c9a7b6474"
-  integrity sha512-JDSh7qVRips2gqym9Z2qOwD3YrC9ylv78HDZa4XZvuST6mD93pfVms+/a2sTpBVWSjtXG2+js6lcLjhOlYKYDQ==
+netlify-plugin-csp-headers@^0.0.1-alpha.6:
+  version "0.0.1-alpha.6"
+  resolved "https://registry.yarnpkg.com/netlify-plugin-csp-headers/-/netlify-plugin-csp-headers-0.0.1-alpha.6.tgz#30875e6603339858f1fadda78932027e7e8a4a05"
+  integrity sha512-1QUdSZjfyyBRym26yberAH1naKDXO3S8o5O6TUBIPSJlDPA0Kjzcbo9CYcMLpu2czqs1xg7naUniDWRiJT1kKA==
   dependencies:
     hast-util-is-css-link "^1.0.4"
     hast-util-is-css-style "^1.0.4"
