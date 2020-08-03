@@ -3,3 +3,5 @@
 /opengraph                      /.netlify/functions/process-cloudinary-image 200
 
 /party-corgi                    https://discord.gg/KTVm3FM 301
+
+/api/csp-reports                https://darrik-csp-headers-dashboard.netlify.app/api/csp-reports 200
