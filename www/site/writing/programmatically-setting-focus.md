@@ -1,7 +1,7 @@
 ---
-tags: ["writing", "accessibility"]
+tags: ["accessibility"]
 title: Programmatically Setting Focus
-excludeFromCollections: true
+eleventyExcludeFromCollections: true
 ---
 
 # Programmatically setting focus

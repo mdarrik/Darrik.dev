@@ -1,6 +1,6 @@
 ---
 title: Introduction To Skip Links
-excludeFromCollections: true
+eleventExcludeFromCollections: true
 tags: ["writing", "accessibility", "skip links"]
 order: 0
 description: "Find out about skip links and why they're important. Also look into implementing your first one."
