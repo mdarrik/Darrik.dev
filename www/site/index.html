@@ -20,7 +20,7 @@ title: Home
 <section class="mb-4">
   {%h2 "mb-4"%} Some things I've written{%endh2%}
   <ul class="post-list mx-2">
-  {%-for post in collections.writing-%}
+  {%-for post in collections.writing reversed-%}
   <li>
   <article>
   <h3 class="text-regular md:text-xl font-decorative font-semibold"><a href="{{post.url | url}}">{{post.data.title}}</a></h3>
