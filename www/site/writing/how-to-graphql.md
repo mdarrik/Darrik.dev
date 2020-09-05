@@ -1,6 +1,7 @@
 ---
 tags: ["notes", "graphql", "tutorial"]
 title: Notes on How To GraphQL
+date: "2020-08-19T22:00:00.000Z"
 ---
 
 # {{title}}
