@@ -8,7 +8,7 @@
     --horizon-blue: #588da8;
     --pastel-blue: #a0ffe6;
     --bluewood: #30475e;
-    --background-color: var(--glow-in-the-dark);
+    --background-color: unset;
     --text-color: var(--night-sky);
     --shadow-color: rgba(0, 75, 149, 0.25);
     --nav-background: var(--cotton-candy-blue);
