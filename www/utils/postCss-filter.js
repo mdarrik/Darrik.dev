@@ -23,7 +23,7 @@ const purgeCSS = purgeCssFunction({
     defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
 })
 
-module.exports = async function(cssFile, callback) {
+module.exports = async function(cssFile) {
     const cssFilePath = path.join('./site/', cssFile);
     const rawCss = await fs.readFile(cssFilePath);
     return await postCss([ postCssImport({plugins: [postCssAtRules]}), postCssAtRules({preserve: false}), postCssEach(), postCssExtend(), postCssNesting(), postCssLogical({
@@ -33,5 +33,5 @@ module.exports = async function(cssFile, callback) {
         ...process.env.NODE_ENV === 'production'
             ? [purgeCSS, cssNano({preset: 'default'})]
             : [],
-      ]  ).process(rawCss, {from: cssFilePath}).then(result =>callback(null, result.css))
+      ]  ).process(rawCss, {from: cssFilePath})
 }

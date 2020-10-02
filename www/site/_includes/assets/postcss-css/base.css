@@ -2,7 +2,7 @@ html {
     color: var(--text-color);
     background-color: var(--background-color);
     font-family: var(--font-regular);
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 body {
     line-height: 1.6;
