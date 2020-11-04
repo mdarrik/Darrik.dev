@@ -1,7 +1,7 @@
 ---
 tags: [notes, Nuxt]
 title: Notes on LWJ Show's "Let's Learn Nuxt (with Maya Shavin)"
-
+date: '2020-11-03'
 
 ---
 # {{title}}
