@@ -57,14 +57,14 @@ The generate command has support for "incremental compilation". This reduces sub
 ## Fetching dynamic content on the server
 Notes on how to fetch content on the server. 
 
-### AsyncData
-The async data method runs before the component is generated. 
+### asyncData
+The [asyncData](https://nuxtjs.org/docs/2.x/features/data-fetching#async-data) hook runs before the component is generated. 
 
-Attaches as a function to the page default export object. Note that because it runs before the component is mounted, it doesn't have access to most of `this` or any of the component properties. 
+`asyncData` works like Vue lifecycle hooks via a function you place on your component instance. Note that because it runs before the component is mounted, it doesn't have access to most of `this` or any of the component properties. 
 
-You can access existing modules with the `context` property. 
+You can access modules and other Nuxt-localized data with the `context` property. 
 
-Nuxt will merge the properties from the AsyncData function with the data property. 
+Nuxt will merge the properties returned from the AsyncData function with the data property. 
 
 Q: Does it merge data properties or just overwrite when the component mounts? e.g. if both return an image array with values, what will happen. Gut says merge, but will need to check. Especially since it's unclear what happens if it's just a value. 
 
