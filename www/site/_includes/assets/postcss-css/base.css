@@ -1,71 +1,94 @@
 html {
-    color: var(--text-color);
-    background-color: var(--background-color);
-    font-family: var(--font-regular);
-    font-size: 1.1rem;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-family: var(--font-regular);
+  font-size: 1.1rem;
 }
 body {
-    line-height: 1.6;
+  line-height: 1.6;
 }
 
-a:focus, a:hover, button:focus, button:hover, input:focus, input:hover {
-    outline: dashed 0.125rem  var(--text-color);
+a:focus,
+a:hover,
+button:focus,
+button:hover,
+input:focus,
+input:hover {
+  outline: dashed 0.2rem var(--text-color);
 }
 
-p, span, li, h1, h2, h3, h4, h5, h6, a {
-    max-width: 80ch;
+p,
+span,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  max-width: 80ch;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: var(--font-decorative);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-decorative);
 }
 
 h1 {
-    font-size: var(--font-3xl);
-    line-height: 1;
+  font-size: var(--font-3xl);
+  line-height: 1;
 }
 
 h2 {
-    font-size: var(--font-2xl);
+  font-size: var(--font-2xl);
 }
 
 h3 {
-    font-size: var(--font-xl);
+  font-size: var(--font-xl);
 }
 
-
 a {
-    color: var(--text-color);
+  color: var(--link-color);
 }
 
 input {
-    height: 1.5rem;
-    margin-inline-end: var(--space-4);
+  height: 1.5rem;
+  margin-inline-end: var(--space-4);
 }
 
 hr {
-    color: var(--text-color);
-    max-width:80ch;
-
+  color: var(--text-color);
+  max-width: 80ch;
 }
 
 %card-block {
-    border: 1px solid var(--text-color);
-    box-shadow: 0px 4px 4px var(--shadow-color);
-    border-radius: var(--border-radius);
+  border: 1px solid var(--text-color);
+  box-shadow: 0px 4px 4px var(--shadow-color);
+  border-radius: var(--border-radius);
 }
 
 ul.post-list {
-    margin-block-end: var(--space-12);
-    & li {
-        margin-block-end: var(--space-6);
-    }
+  margin-block-end: var(--space-12);
+  & li {
+    margin-block-end: var(--space-6);
+  }
 }
 
 .work-section {
-    margin-block-end: var(--space-4);
-    & ul {
-        margin-block-start: 0;
-        margin-block-end: var(--space-2);
-    }
+  margin-block-end: var(--space-4);
+  & ul {
+    margin-block-start: 0;
+    margin-block-end: var(--space-2);
+  }
+}
+
+code {
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  color: var(--inline-code-color);
+  font-style: italic;
 }
