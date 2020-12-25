@@ -52,7 +52,7 @@ For a concrete example of a routes function, you can see the [`get-routes.js` fi
 So once you've configured your site for incremental generation, you need to go through the process of merging your partial/incremental builds with your full site builds. How you do this in practice will depend a lot on your personal deployment setup. But the gist is that you want to get a folder with your existing build, and merge the output of your Nuxt build into that folder and deploy it. Since you want to copy your new files into your existing files, you'll want to _not_ deploy your `dist` folder directly. This is because Nuxt will delete your `dist` folder before each build, so you'll end up losing any cache you restore to `dist`. Instead, I'd create a new folder as part of your deploy process that you can restore/deploy from. So in my example repo, I create a www folder which gets cached between builds & I copy to/deploy that every time. Since I deploy to Netlify, I use a build plugin to handle caching, restoring, and copying to the folder. But for other CI/CD pipelines, it'll look similar. The gist of it is this: 
 1. Restore any cached `www` & `.nuxt` folders (the `.nuxt` folder is necessary to not trigger a rebuild). 
 2. Build your site
-3. Copy your `dist` folder into your `www` folder. (For Netlify, build plugins have hooks that trigger after build. The plugins are written in JS & run on an Ubuntu instance, so you can use `exec('cp dist www')` (or `` `cp dist ${process.env.PUBLISH_DIR}` ``). For other pipelines, you'll want to do something similar.
+3. Copy your `dist` folder into your `www` folder. (For Netlify, build plugins have hooks that trigger after build. The plugins are written in JS & run on an Ubuntu instance, so you can use `execSync('cp -r dist www')` (or more specifically: ``execSync(`cp -r dist ${process.env.PUBLISH_DIR}`) ``). For other pipelines, you'll want to do something similar.
 4. Deploy your `www` folder.
 
 Once that's configured your site is all configured for incremental builds. So after a full build you'll be able to test it out. If working locally, you can run your build command then set your environment variable for incremental builds and run it again. In bash, that might look like this (assuming your incremental build variable is `INCREMENTAL_BUILD` & is a boolean): 
@@ -61,4 +61,4 @@ npm run build
 cp dist www
 INCREMENTAL_BUILD=true npm run build
 ```
-If you don't get a full Webpack rebuild the second time, and only the pages you intended to built were listed, then you're all set. Your site is now configured for incremental builds with Nuxt!
+If you don't get a full Webpack rebuild the second time, and only the pages you intended to built were listed, then you're all set. Your site is now configured for incremental builds with Nuxt! In my example site linked above, updating the content for a single page took 5s vs the 1m 26s for a full build. 
