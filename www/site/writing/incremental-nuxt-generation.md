@@ -1,7 +1,7 @@
 ---
 tags: [writing, Nuxt, Vue, jamstack]
 title: Incrementally Generating Pages with Nuxt
-description: Generate just a few pages to greatly speed up content changes on your Static Nuxt site. 
+description: How to generate just a few pages to greatly speed up content changes on your Static Nuxt site. 
 ---
 
 # {{title}}
@@ -61,4 +61,4 @@ npm run build
 cp dist www
 INCREMENTAL_BUILD=true npm run build
 ```
-If you don't get a full Webpack rebuild the second time, and only the pages you intended to built were listed, then you're all set. Your site is now configured for incremental builds with Nuxt! In my example site linked above, updating the content for a single page took 5s vs 3 for a full site build. 
+If you don't get a full Webpack rebuild the second time, and only the pages you intended to built were listed, then you're all set. Your site is now configured for incremental builds with Nuxt! In my example site linked above, updating the content for a single page took 5s vs 36s for a full site build (without a Webpack rebuild).  
