@@ -6,7 +6,7 @@ description: Generate just a few pages to greatly speed up content changes on yo
 
 # {{title}}
 
-Nuxt's generate feature makes it a great option for creating static sites with Vue. Like many static site generators, build times grow as the site does. To help with this, Nuxt provides a cache feature you can use to prevent Webpack rebuilds when only content changes. This can shave a couple minutes off of content-only builds. We can take advantage of this & the generate config's route property to generate just the pages that have changed. This can bring long build times to a handful of seconds. I initially figured this out while doing work on a site with build times > 20 minutes. 
+Nuxt's generate feature makes it a great option for creating static sites with Vue. Like many static site generators, build times grow as the site does. To help with this, Nuxt provides a cache feature you can use to prevent Webpack rebuilds when only content changes. This can shave a couple minutes off of content-only builds. We can take advantage of this & the generate config's route property to generate just the pages that have changed. This can make content-only builds take just a handful of seconds instead of minutes, especially on large sites.
 
 ## See a working example
 
@@ -61,4 +61,4 @@ npm run build
 cp dist www
 INCREMENTAL_BUILD=true npm run build
 ```
-If you don't get a full Webpack rebuild the second time, and only the pages you intended to built were listed, then you're all set. Your site is now configured for incremental builds with Nuxt! In my example site linked above, updating the content for a single page took 5s vs the 1m 26s for a full build. 
+If you don't get a full Webpack rebuild the second time, and only the pages you intended to built were listed, then you're all set. Your site is now configured for incremental builds with Nuxt! In my example site linked above, updating the content for a single page took 5s vs 3 for a full site build. 
