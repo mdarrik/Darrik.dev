@@ -12,7 +12,7 @@
     "build": "eleventy"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "@fullhuman/postcss-purgecss": "^2.1.0",
     "autoprefixer": "^9.7.4",
@@ -20,15 +20,14 @@
     "dotenv": "^8.2.0",
     "libhoney": "^2.0.2",
     "node-fetch": "^2.6.0",
+    "postcss": "^7.0.35",
     "postcss-at-rules-variables": "^0.1.10",
     "postcss-cli": "^7.1.0",
     "postcss-each": "^0.10.0",
     "postcss-extend": "^1.0.5",
     "postcss-import": "^12.0.1",
     "postcss-logical": "^4.0.2",
-    "postcss-nesting": "^7.0.1",
-    "purgecss": "^2.1.0",
-    "tailwindcss": "^1.2.0"
+    "postcss-nesting": "^7.0.1"
   },
   "dependencies": {
     "modern-css-reset": "^1.1.0"
