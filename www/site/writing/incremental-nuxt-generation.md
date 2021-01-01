@@ -33,12 +33,13 @@ The specifics of your function will be fairly unique to your site, but a structu
 ```js
 export default async function() {
     // this env variable can be anything. 
-    // But you want it to be a flag you can turn on & off to detect full builds vs incremental
+    // But you want it to be a flag you can turn on & off
+    // to detect full builds vs incremental
     if(process.env.IS_INCREMENTAL_GENERATE) { 
         // fetch just the page(s) that changed
         return incrementalRoutes // array of just your changed pages
     }
-    // fetch all pages - this is needed for code changes or global content changes
+    // fetch all pages - this is needed for full rebuilds
     return routes // array with every single dynamic page in your site.
 }
 ```

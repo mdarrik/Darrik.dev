@@ -27,7 +27,10 @@ h4,
 h5,
 h6,
 a {
-  max-width: 80ch;
+  max-width: 40ch;
+  @media (min-width: 40rem) {
+    max-width: 80ch;
+  }
 }
 
 h1,
