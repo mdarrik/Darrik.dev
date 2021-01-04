@@ -15,10 +15,9 @@
   --footer-background: var(--pastel-blue);
   --inline-code-color: var(--night-sky);
   --link-color: #1d818c;
-  --font-regular: Fira Sans, Fira Sans__subset, -apple-system,
-    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
-    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
-    Noto Color Emoji;
+  --font-regular: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --font-decorative: Fredericka the Great, Fredericka the Great__subset, cursive;
   /*spacing*/
   --space-0: 0;
