@@ -1,6 +1,6 @@
 ---
 tags: ["writing", "observability", "o11y"]
-title: Configuring Libhoney for Rust
+title: Configuring Libhoney Rust
 date: "2020-09-04T22:30:00.000Z"
 description: How to setup the libhoney-rust crate in your applications so you can add observability to your Rust programs and applications. 
 ---
