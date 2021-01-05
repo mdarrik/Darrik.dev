@@ -30,6 +30,7 @@ exports.handler = async function (event, context) {
 
   try {
     //https://res.cloudinary.com/darrik-dev/image/upload/v1587278753/darrik.dev/opengraph-images/transparent-png.png
+    console.log({ siteUrl, PR: process.env.PULL_REQUEST });
     console.log(
       `${siteUrl}/.netlify/functions/opengraph-image-generator?${queryString.stringify(
         queryStringParameters
