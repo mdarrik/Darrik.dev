@@ -1,6 +1,5 @@
 const playwright = require("playwright-aws-lambda");
 require("playwright-core");
-require("./image.js");
 const fs = require("fs");
 const script = fs.readFileSync("./image.js", "utf-8");
 const libHoney = require("libhoney");
