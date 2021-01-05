@@ -28,8 +28,7 @@ exports.handler = async function (event, context) {
     userAction: event.UserAction,
     queryStringParameters,
   });
-  console.log(host[0]);
-  const siteUrl = host[0];
+  console.log({ host });
   try {
     //https://res.cloudinary.com/darrik-dev/image/upload/v1587278753/darrik.dev/opengraph-images/transparent-png.png
     console.log(
