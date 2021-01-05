@@ -17,7 +17,8 @@ const siteUrl =
     : process.env.URL) || "http://localhost:8888";
 
 exports.handler = async function (event, context) {
-  const { queryStringParameters } = event;
+  console.log(event);
+  const { queryStringParameters, host } = event;
   const honeycombEvent = honeycomb.newEvent();
   honeycombEvent.add({
     functionName: context.functionName,
@@ -27,10 +28,10 @@ exports.handler = async function (event, context) {
     userAction: event.UserAction,
     queryStringParameters,
   });
-
+  console.log(host[0]);
+  const siteUrl = host[0];
   try {
     //https://res.cloudinary.com/darrik-dev/image/upload/v1587278753/darrik.dev/opengraph-images/transparent-png.png
-    console.log({ siteUrl, PR: process.env.PULL_REQUEST });
     console.log(
       `${siteUrl}/.netlify/functions/opengraph-image-generator?${queryString.stringify(
         queryStringParameters
