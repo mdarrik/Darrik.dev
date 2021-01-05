@@ -1,7 +1,8 @@
 const playwright = require("playwright-aws-lambda");
 require("playwright-core");
 const fs = require("fs");
-const script = fs.readFileSync("./image.js", "utf-8");
+const path = require("path");
+const script = fs.readFileSync(path.join(__dirname, "./image.js"), "utf-8");
 const libHoney = require("libhoney");
 const honeycomb = new libHoney({
   writeKey: process.env.HONEYCOMB_API_KEY,
