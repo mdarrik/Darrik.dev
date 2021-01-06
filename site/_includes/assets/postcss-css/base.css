@@ -77,6 +77,7 @@ hr {
 
 ul.post-list {
   margin-block-end: var(--space-12);
+  list-style: none;
   & li {
     margin-block-end: var(--space-6);
   }
