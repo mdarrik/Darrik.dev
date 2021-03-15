@@ -1,0 +1,106 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Graph Images</title>
+    <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous"
+        href="/subfont/Fredericka_the_Great-400-181cba1a4a.woff2">
+    <script async>
+        try { new FontFace('Fredericka the Great__subset', "url(/subfont/Fredericka_the_Great-400-181cba1a4a.woff2) format('woff2'), url(/subfont/Fredericka_the_Great-400-edc6e87de8.woff) format('woff')", {}).load() } catch (e) { } 
+    </script>
+    <style>
+        @font-face {
+            font-display: swap;
+            font-family: Fredericka the Great__subset;
+            font-stretch: normal;
+            font-style: normal;
+            font-weight: 400;
+            src: url(/subfont/Fredericka_the_Great-400-181cba1a4a.woff2) format("woff2"), url(/subfont/Fredericka_the_Great-400-edc6e87de8.woff) format("woff");
+            unicode-range: U+64-7a, U+20, U+27, U+30-39, U+41-52, U+2014, U+53-5a, U+61-63
+        }
+    </style>
+    <style>
+        :root {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ccffcc;
+            --text-background: rgba(0, 75, 149, 0.75);
+            --additional-text-color: rgba(204, 255, 204, 0.75);
+        }
+
+        *>* {
+            box-sizing: border-box;
+        }
+
+        /* prettier-ignore */
+        .page-wrapper {
+            display: grid;
+            width: 1200px;
+            height: 630px;
+            font-size: 64px;
+            padding-top: 65px;
+            background-image: url("/images/starry-background.png");
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas:
+                /* prettier-ignore */
+                "icons title title"
+
+                /* prettier-ignore */
+                "icons title title"
+                /* prettier-ignore */
+                "icons title title"
+                /* prettier-ignore */
+                "url tags tags";
+
+        }
+
+        .icon-section {
+            grid-area: icons;
+            max-height: 400px;
+        }
+
+        .title-section {
+            grid-area: title;
+            padding-right: 96px;
+        }
+
+        .url-section {
+            grid-area: url;
+            margin: auto 25px;
+
+        }
+
+        .text {
+            color: var(--additional-text-color);
+            background-color: var(--text-background);
+        }
+
+        .tags-section {
+            grid-area: tags;
+            display: flex;
+            margin: auto 0;
+            justify-content: space-evenly;
+        }
+
+        h1 {
+            font-family: 'Fredericka the Great__subset';
+            background-color: var(--text-background);
+            margin: .5rem;
+            font-size: 96px;
+        }
+    </style>
+    <!-- prettier-ignore-end -->
+</head>
+
+<body>
+    <script type="module" src="/image.js">
+
+    </script>
+</body>
+
+</html>
