@@ -10,7 +10,6 @@ exports.handler = async (event, context) => {
   const honeycombEvent = honeycomb.newEvent();
   const formId = process.env.CK_FORM_ID;
   const url = `https://api.convertkit.com/v3/forms/${formId}/subscribe`;
-  console.log(event.body);
   const { name, email } = JSON.parse(event.body)?.payload;
   honeycombEvent.add({
     functionName: context.functionName,
