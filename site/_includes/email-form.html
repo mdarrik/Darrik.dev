@@ -1,16 +1,21 @@
-<div class="newsletter-form mx-8 justify-center px-8 md:px-16 mb-4 md:text-xl" >
-<h2 id="newsletter-form-header" class="text-2xl mb-2">Join my Newsletter</h2>
-<p class="mb-4">
-    Want to hear from me when I write a new blog post? Want a chance to shape future posts or get exclusive content?
-    Then sign up for my newsletter!
-</p>
-<form action="/api/newsletter-signup" method="POST" aria-labelledby="newsletter-form-header" aria-describedby="newsletter-privacy-note" class="flex flex-column mb-4">
-    <label for="newsletter-form-name">Your Name</label>
-    <input type="text" id="newsletter-form-name" name="first_name" class="py-3 px-2" autocomplete="given-name">
-    <label for="newsletter-form-email">Your Email Address</label>
-    <input type="email" id="newsletter-form-email" name="email" class="py-3 px-2 mb-4" autocomplete="email">
-    <button type="submit">Join the Newsletter</button>
-</form>
-<p id="newsletter-privacy-note" class="mb-2 text-regular"><span class="font-bold">Note: </span>I promise to not spam you, and I won't share your email with anyone except
-    Convertkit (who I use to manage my newsletter).</p>
+<div class="newsletter-form mx-8 justify-center px-8 md:px-16 mb-4 md:text-xl">
+    <h2 id="newsletter-form-header" class="text-2xl mb-2">Join my Newsletter</h2>
+    <p class="mb-4">
+        Want to hear from me when I write a new blog post? Want a chance to shape future posts or get exclusive content?
+        Then sign up for my newsletter!
+    </p>
+    <form action="/subscription-successful" method="POST" aria-labelledby="newsletter-form-header"
+        aria-describedby="newsletter-privacy-note" class="flex flex-column mb-4" data-netlify="true"
+        netlify-honeypot="hidden-name" name="email-subscription">
+        <label aria-hidden="true" class="visually-hidden">Your Name <input aria-hidden="true" name="hidden-name"
+                tabindex="-1"></label>
+        <label for="newsletter-form-name">Your Name</label>
+        <input type="text" id="newsletter-form-name" name="name" class="py-3 px-2" autocomplete="given-name">
+        <label for="newsletter-form-email">Your Email Address</label>
+        <input type="email" id="newsletter-form-email" name="email" class="py-3 px-2 mb-4" autocomplete="email">
+        <button type="submit">Join the Newsletter</button>
+    </form>
+    <p id="newsletter-privacy-note" class="mb-2 text-regular"><span class="font-bold">Note: </span>I promise to not spam
+        you, and I won't share your email with anyone except
+        Convertkit (who I use to manage my newsletter).</p>
 </div>

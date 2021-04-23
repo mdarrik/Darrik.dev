@@ -1,5 +1,3 @@
-/api/newsletter-signup           /.netlify/functions/newsletter-signup  200
-
 /opengraph                      /.netlify/functions/process-cloudinary-image 200
 
 /party-corgi                    https://discord.gg/KTVm3FM 301
