@@ -12,5 +12,8 @@
   #  targetPort = 8080
   #  port = 8082
    framework = "eleventy"
+
+  [functions]
+  node_bundler = "esbuild"
   
   ## more info on configuring this file: https://www.netlify.com/docs/netlify-toml-reference/ 
