@@ -26,7 +26,7 @@ description: "Web Dev, Accessibility Specialist, Doing My Best to Make the Web I
     />
     <meta
         name="og:url"
-        content="{{siteMetadata.url}}/{{page.url}}"
+        content="{{siteMetadata.url}}{{page.url}}"
     />
     <link rel="icon" href="/images/DM-icon.png" />
     <style>{{css | safe }}</style>
@@ -61,7 +61,7 @@ description: "Web Dev, Accessibility Specialist, Doing My Best to Make the Web I
                         {%if page.url == '/for-hire/'%}aria-current="page" {%endif%}>Hire Me</a>
                 </li>
                 <li>
-                    <a href="https://www.github.com/mdarrik" class="justify-center" aria-labelledby="nav-link-github">
+                    <a href="https://www.github.com/mdarrik" class="justify-center" aria-labelledby="nav-link-github-label">
                     <div class="inline mt-2 md:m-0">
                         <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
                             <path
