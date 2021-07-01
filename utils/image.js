@@ -234,12 +234,12 @@ const flyingVue = (props) => html`
 
 const image = ({ tags }) => {
   const flyingIcons = {
-    telescope: flyingTelescopeSvg,
+    o11y: flyingTelescopeSvg,
     rust: flyingFerrisSvg,
     vue: flyingVue,
   };
   const tagIcons = {
-    telescope,
+    o11y: telescope,
   };
   return html`
     <div class="page-wrapper">
@@ -261,4 +261,4 @@ const image = ({ tags }) => {
     </div>
   `;
 };
-render(html`<${image} tags=${["telescope", "rust", "vue"]} />`, document.body);
+render(html`<${image} tags=${["o11y", "rust", "vue"]} />`, document.body);
