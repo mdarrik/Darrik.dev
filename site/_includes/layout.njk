@@ -4,7 +4,7 @@ includeNewsletterForm: true
 description: "Web Dev, Accessibility Specialist, Doing My Best to Make the Web Inclusive"
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +86,7 @@ description: "Web Dev, Accessibility Specialist, Doing My Best to Make the Web I
                 &copy;
                 {{siteMetadata.owner}} &mdash; {{siteMetadata.year}}
             </span>
-            <ul class="flex flex-shrink justify-center">
+            <ul class="flex flex-shrink justify-center" role="list">
                 {% for socialMediaSite in siteMetadata.socialMedia %}
                 <li class="mr-4 h-6 w-6">
                     <a href="{{socialMediaSite.url}}" aria-label="Darrik's {{socialMediaSite.name}}">

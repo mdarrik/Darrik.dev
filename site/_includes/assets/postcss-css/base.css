@@ -96,3 +96,24 @@ code {
   color: var(--inline-code-color);
   font-style: italic;
 }
+
+.markdown {
+  & h1 {
+    margin-block-end: var(--space-12);
+  }
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    & + p,
+    & + span,
+    & + pre {
+      margin-block-start: var(--space-1);
+    }
+  }
+  & p,
+  & pre {
+    margin-block-end: var(--space-8);
+  }
+}
