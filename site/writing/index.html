@@ -9,18 +9,20 @@ isMarkdown: true
     {%- for post in collections.writing reversed -%}
     <li>
         <article class="block">
-            <h3><a href="{{post.url | url}}" class=" inline-block mb-2">{{post.data.title}}</a></h3>    
+            <h2 class="text-xl"><a href="{{post.url | url}}" class="inline-block mb-2">{{post.data.title}}</a></h2>
             {{post.data.description}}
         </article>
     </li>
     {%- endfor -%}
 </ul>
 <section class="topic-section">
-<h2 id="topic-header" class="font-semibold md:text-2xl text-xl mb-2">Find Articles By Topic</h2>
-{%-assign tags = collections | keys | excludeValue: "all" | excludeValue: "writing" | excludeValue: "notes" | sortAlphabetical  -%}
-<ul aria-labelledby="topic-header">
-{%- for tag in tags-%}
-<li><a href="/{{tag | replace: " ", "-" | urlencode}}" class="text-regular md:text-xl">{{tag | capitalize}}</a></li>
-{%- endfor -%}
-</ul>
+    <h2 id="topic-header" class="font-semibold md:text-2xl text-xl mb-2">Find Articles By Topic</h2>
+    {%-assign tags = collections | keys | excludeValue: "all" | excludeValue: "writing" | excludeValue: "notes" |
+    sortAlphabetical -%}
+    <ul aria-labelledby="topic-header">
+        {%- for tag in tags-%}
+        <li><a href="/{{tag | replace: " ", " -" | urlencode}}" class="text-regular md:text-xl">{{tag | capitalize}}</a>
+        </li>
+        {%- endfor -%}
+    </ul>
 </section>
