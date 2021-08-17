@@ -5,7 +5,6 @@ const purgeCssFunction = require("@fullhuman/postcss-purgecss");
 const postCssNesting = require("postcss-nesting");
 const postCssImport = require("postcss-import");
 const postCssEach = require("postcss-each");
-const postCssExtend = require("postcss-extend");
 const postCssAtRules = require("postcss-at-rules-variables");
 const autoprefixer = require("autoprefixer");
 const cssNano = require("cssnano");
@@ -27,9 +26,8 @@ module.exports = async function (cssFile) {
   const rawCss = await fs.readFile(cssFilePath);
   return await postCss([
     postCssImport({ plugins: [postCssAtRules] }),
-    postCssAtRules({ preserve: false }),
+    postCssAtRules({ preserve: false, atRules: ["media"] }),
     postCssEach(),
-    postCssExtend(),
     postCssNesting(),
     ...(process.env.NODE_ENV === "production"
       ? [purgeCSS, cssNano({ preset: "default" })]

@@ -23,139 +23,77 @@
   width: auto;
   height: auto;
   overflow: auto;
-  @apply shadow-outline;
 }
-/*#endregion*/
-%d-none {
+
+/*#region display-tokens*/
+.d-none {
   display: none;
 }
-%inline {
+.inline {
   display: inline;
 }
-%block {
+.block {
   display: block;
 }
-%flex {
+.flex {
   display: flex;
 }
-%flex-column {
-  flex-direction: column;
-}
-%flex-row {
+.flex-row {
   flex-direction: row;
 }
-%flex-none {
+.flex-column {
+  flex-direction: column;
+}
+.flex-none {
   flex: none;
 }
-%items-stretch {
+.items-stretch {
   align-items: stretch;
 }
-%items-start {
+.items-start {
   align-items: flex-start;
 }
-%items-center {
+.items-center {
   align-items: center;
 }
-%items-end {
+.items-end {
   align-items: flex-end;
 }
-%items-baseline {
+.items-baseline {
   align-items: baseline;
 }
-%justify-start {
+
+.justify-start {
   justify-content: flex-start;
 }
-%justify-center {
+.justify-center {
   justify-content: center;
 }
-%justify-end {
+.justify-end {
   justify-content: flex-end;
 }
-%justify-between {
+.justify-between {
   justify-content: space-between;
 }
-%justify-around {
+.justify-around {
   justify-content: space-around;
 }
-%w-full {
-  width: 100%;
-}
-%w-max-content {
+
+.w-max-content {
   width: max-content;
   &:focus {
     width: max-content;
   }
 }
-%h-max-content {
+.h-max-content {
   height: max-content;
-  \:focus\:&:focus {
+  &:focus {
     height: max-content;
   }
 }
 
-/*#region display-tokens*/
-.d-none {
-  @extend %d-none;
-}
-.inline {
-  @extend %inline;
-}
-.block {
-  @extend %block;
-}
-.flex {
-  @extend %flex;
-}
-.flex-row {
-  @extend %flex-row;
-}
-.flex-column {
-  @extend %flex-column;
-}
-.flex-none {
-  @extend %flex-none;
-}
-.items-stretch {
-  @extend %items-stretch;
-}
-.items-start {
-  @extend %items-stretch;
-}
-.items-center {
-  @extend %items-center;
-}
-.items-end {
-  @extend %items-end;
-}
-.items-baseline {
-  @extend %items-baseline;
-}
-
-.justify-start {
-  @extend %justify-start;
-}
-.justify-center {
-  @extend %justify-center;
-}
-.justify-end {
-  @extend %justify-end;
-}
-.justify-between {
-  @extend %justify-between;
-}
-.justify-around {
-  @extend %justify-around;
-}
-
-.w-max-content {
-  @extend %w-max-content;
-}
-.h-max-content {
-  @extend %h-max-content;
-}
-
 .w-full {
-  @extend %w-full;
+  width: 100%;
 }
 /*#endregion*/
 
@@ -233,38 +171,23 @@
 @each $fontSize, $fontModifier, $lineHeight in (var(--font-sizes)),
   (var(--font-modifiers)), (var(--line-heights))
 {
-  %text-$fontModifier {
+  .text-$fontModifier {
     font-size: var($fontSize);
     line-height: $lineHeight;
   }
-  .text-$fontModifier {
-    @extend %text-$fontModifier;
-  }
 }
 
-%font-light {
+.font-light {
   font-weight: 300;
 }
-%font-normal {
+.font-normal {
   font-weight: 400;
 }
-%font-semibold {
+.font-semibold {
   font-weight: 600;
 }
-%font-bold {
-  font-weight: 700;
-}
-.font-light {
-  @extend %font-light;
-}
-.font-normal {
-  @extend %font-normal;
-}
-.font-semibold {
-  @extend %font-semibold;
-}
 .font-bold {
-  @extend %font-bold;
+  font-weight: 700;
 }
 /*#endregion*/
 
@@ -272,64 +195,70 @@
 @each $breakpoint, $bpSize in (var(--breakpoints)), (var(--screen-size)) {
   @media (min-width: $breakpoint) {
     .$bpSize\:d-none {
-      @extend %d-none;
+      display: none;
     }
     .$bpSize\:inline {
-      @extend %inline;
+      display: inline;
     }
     .$bpSize\:block {
-      @extend %block;
+      display: block;
     }
     .$bpSize\:flex {
-      @extend %flex;
+      display: flex;
     }
     .$bpSize\:flex-row {
-      @extend %flex-row;
+      flex-direction: row;
     }
     .$bpSize\:flex-column {
-      @extend %flex-column;
+      flex-direction: column;
     }
     .$bpSize\:flex-none {
-      @extend %flex-none;
+      flex: none;
     }
     .$bpSize\:items-stretch {
-      @extend %items-stretch;
+      align-items: stretch;
     }
     .$bpSize\:items-start {
-      @extend %items-stretch;
+      align-items: flex-start;
     }
     .$bpSize\:items-center {
-      @extend %items-center;
+      align-items: center;
     }
     .$bpSize\:items-end {
-      @extend %items-end;
+      align-items: flex-end;
     }
     .$bpSize\:items-baseline {
-      @extend %items-baseline;
+      align-items: baseline;
     }
     .$bpSize\:justify-start {
-      @extend %justify-start;
+      justify-content: flex-start;
     }
     .$bpSize\:justify-center {
-      @extend %justify-center;
+      justify-content: center;
     }
     .$bpSize\:justify-end {
-      @extend %justify-end;
+      justify-content: flex-end;
     }
     .$bpSize\:justify-between {
-      @extend %justify-between;
+      justify-content: space-between;
     }
     .$bpSize\:justify-around {
-      @extend %justify-around;
+      justify-content: space-around;
     }
     .$bpSize\:w-full {
-      @extend %w-full;
+      width: 100%;
     }
     .$bpSize\:w-max-content {
-      @extend %w-max-content;
+      width: max-content;
+      &:focus {
+        width: max-content;
+      }
     }
     .$bpSize\:h-max-content {
-      @extend %h-max-content;
+      height: max-content;
+      &:focus {
+        height: max-content;
+      }
     }
     @each $space
       in (0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64)
@@ -377,24 +306,25 @@
         padding-bottom: var(--space-$space);
       }
     }
-    @each $fontSize, $fontModifier in (var(--font-sizes)),
-      (var(--font-modifiers))
+    @each $fontSize, $fontModifier, $lineHeight in (var(--font-sizes)),
+      (var(--font-modifiers)), (var(--line-heights))
     {
       .$bpSize\:text-$fontModifier {
-        @extend %text-$fontModifier;
+        font-size: var($fontSize);
+        line-height: $lineHeight;
       }
     }
     .$bpSize\:font-light {
-      @extend %font-light;
+      font-weight: 300;
     }
     .$bpSize\:font-normal {
-      @extend %font-normal;
+      font-weight: 400;
     }
     .$bpSize\:font-semibold {
-      @extend %font-semibold;
+      font-weight: 600;
     }
     .$bpSize\:font-bold {
-      @extend %font-bold;
+      font-weight: 700;
     }
   }
 }
