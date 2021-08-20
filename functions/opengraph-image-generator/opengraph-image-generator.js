@@ -1,15 +1,15 @@
-const playwright = require("playwright-aws-lambda");
-require("playwright-core");
-const fs = require("fs");
-const path = require("path");
+import playwright from "playwright-aws-lambda";
+import fs from "fs";
+import path from "path";
+import libhoney from "libhoney";
+import { htmlString } from "./image-html-string.js";
 const script = fs.readFileSync(path.join(__dirname, "./image.js"), "utf-8");
-const libHoney = require("libhoney");
 const honeycomb = new libHoney({
   writeKey: process.env.HONEYCOMB_API_KEY,
   dataset: process.env.HONEYCOMB_DATA_SET,
 });
 
-exports.handler = async function (
+export async function handler(
   { UserId, UserAction, queryStringParameters },
   fnContext
 ) {
@@ -38,18 +38,7 @@ exports.handler = async function (
       width: 1200,
       height: 630,
     });
-    await page.setContent(
-      `<!DOCTYPE html>
-        <html>
-            <head>
-                <meta charset="utf-8" />
-            </head>
-            <body>
-                <div id='container'></div>
-            </body>
-        </html>
-    `
-    );
+    await page.setContent(htmlString);
     const tags = queryStringParameters.tags
       ? decodeURIComponent(queryStringParameters.tags).split(",")
       : [];
@@ -60,9 +49,6 @@ exports.handler = async function (
               decodeURIComponent(queryStringParameters.title) || "No Title"
             }"
             window.tags = ${JSON.stringify(tags)};
-            window.author = "${
-              decodeURIComponent(queryStringParameters.author) || ""
-            }";
         `,
     });
     await page.addScriptTag({
@@ -99,4 +85,4 @@ exports.handler = async function (
   honeycombEvent.add(returnValue);
   honeycombEvent.send();
   return returnValue;
-};
+}

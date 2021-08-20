@@ -10,7 +10,7 @@
   "scripts": {
     "serve": "eleventy --serve",
     "build": "eleventy",
-    "deploy-build": "eleventy && rollup -c functions/opengraph-image-generator/rollup.config.js"
+    "deploy-build": "eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
