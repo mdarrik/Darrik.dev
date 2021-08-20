@@ -14,11 +14,11 @@
    framework = "eleventy"
 
   [functions]
-  node_bundler = "esbuild"
+  node_bundler = "zisi"
   [functions.opengraph-image-generator]
     node_bundler = "zisi"
     external_node_modules = ["playwright-core", "lambdafs"]
-    included_files = ["functions/opengraph-image-generator/image.js", "**/*/chromium.br", "**/*/aws.tar.br", "**/*/swiftshader.tar.br"]
+    included_files = ["functions/opengraph-image-generator/image.js"]
 
   [environment]
 AWS_LAMBDA_JS_RUNTIME="nodejs14.x"
