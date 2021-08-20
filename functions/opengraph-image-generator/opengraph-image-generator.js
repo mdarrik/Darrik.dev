@@ -1,9 +1,9 @@
 import playwright from "playwright-aws-lambda";
 import fs from "fs";
 import path from "path";
-import libhoney from "libhoney";
+import libHoney from "libhoney";
 import { htmlString } from "./image-html-string.js";
-const script = fs.readFileSync(path.join(__dirname, "./image.js"), "utf-8");
+
 const honeycomb = new libHoney({
   writeKey: process.env.HONEYCOMB_API_KEY,
   dataset: process.env.HONEYCOMB_DATA_SET,
@@ -13,6 +13,10 @@ export async function handler(
   { UserId, UserAction, queryStringParameters },
   fnContext
 ) {
+  console.log(path.join(__dirname, "./image.js"), __dirname);
+  console.log(fs.readdirSync(__dirname));
+  const script = fs.readFileSync(path.join(__dirname, "./image.js"), "utf-8");
+
   //Honeycomb Init
   const honeycombEvent = honeycomb.newEvent();
   //add some function-level info.
