@@ -9,14 +9,12 @@ const honeycomb = new libHoney({
   dataset: process.env.HONEYCOMB_DATA_SET,
 });
 
+const script = fs.readFileSync(path.join(__dirname, "./image.js"), "utf-8");
+
 export async function handler(
   { UserId, UserAction, queryStringParameters },
   fnContext
 ) {
-  console.log(path.join(__dirname, "./image.js"), __dirname);
-  console.log(fs.readdirSync(__dirname));
-  const script = fs.readFileSync(path.join(__dirname, "./image.js"), "utf-8");
-
   //Honeycomb Init
   const honeycombEvent = honeycomb.newEvent();
   //add some function-level info.
@@ -36,17 +34,18 @@ export async function handler(
   };
   try {
     browser = await playwright.launchChromium();
+    console.log("browser launched");
     const context = await browser.newContext();
     const page = await context.newPage();
     page.setViewportSize({
       width: 1200,
       height: 630,
     });
+    console.log("page opened");
     await page.setContent(htmlString);
     const tags = queryStringParameters.tags
       ? decodeURIComponent(queryStringParameters.tags).split(",")
       : [];
-    console.log(decodeURIComponent(queryStringParameters.author));
     await page.addScriptTag({
       content: `
             window.title = "${
