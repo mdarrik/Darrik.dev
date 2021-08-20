@@ -1,8 +1,9 @@
-import playwright from "playwright-aws-lambda";
-import fs from "fs";
-import path from "path";
-import libHoney from "libhoney";
-import { htmlString } from "./image-html-string.js";
+const playwright = require("playwright-aws-lambda");
+const fs = require("fs");
+const path = require("path");
+const libHoney = require("libhoney");
+
+const htmlString = import("./image-html-string");
 
 const honeycomb = new libHoney({
   writeKey: process.env.HONEYCOMB_API_KEY,
@@ -11,7 +12,7 @@ const honeycomb = new libHoney({
 
 const script = fs.readFileSync(path.join(__dirname, "./image.js"), "utf-8");
 
-export async function handler(
+exports.handler = async function (
   { UserId, UserAction, queryStringParameters },
   fnContext
 ) {
@@ -42,7 +43,7 @@ export async function handler(
       height: 630,
     });
     console.log("page opened");
-    await page.setContent(htmlString);
+    await page.setContent(await htmlString);
     const tags = queryStringParameters.tags
       ? decodeURIComponent(queryStringParameters.tags).split(",")
       : [];
@@ -88,4 +89,4 @@ export async function handler(
   honeycombEvent.add(returnValue);
   honeycombEvent.send();
   return returnValue;
-}
+};
