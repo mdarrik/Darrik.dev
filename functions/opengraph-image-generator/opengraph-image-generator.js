@@ -57,11 +57,16 @@ exports.handler = async function (
             window.tags = ${JSON.stringify(tags)};
         `,
     });
-    await page.addScriptTag({
+    const handle = await page.addScriptTag({
       content: script,
     });
     const boundingRect = await page.evaluate(() => {
-      const container = document.body;
+      const container = document.getElementById("page-wrapper");
+      if (!container) {
+        setTimeout(() => {
+          container = document.getElementById("page-wrapper");
+        }, 200);
+      }
       const { x, y, width, height } = container.getBoundingClientRect();
       return { x, y, width, height };
     });

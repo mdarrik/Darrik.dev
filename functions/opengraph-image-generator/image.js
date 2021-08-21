@@ -342,7 +342,7 @@ const image = ({ tags, title } = { tags: [], title: "" }) => {
     .filter((tag) => flyingIcons[tag])
     .map((tag) => html`<${flyingIcons[tag]} />`);
   return html`
-    <div class="page-wrapper">
+    <div class="page-wrapper" id="page-wrapper">
       <div
         class="icon-section ${displayedFlyingTags.length === 3 ? "full" : ""}"
       >
@@ -365,6 +365,6 @@ const image = ({ tags, title } = { tags: [], title: "" }) => {
     </div>
   `;
 };
-const tags = window.tags;
-const title = window.title;
+const tags = window.tags || [];
+const title = window.title || "";
 render(html`<${image} tags=${tags} title=${title} />`, document.body);
