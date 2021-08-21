@@ -34,12 +34,11 @@
     "rollup-plugin-node-globals": "^1.4.0"
   },
   "dependencies": {
-    "chrome-aws-lambda": "^10.1.0",
     "cloudinary": "^1.21.0",
     "libhoney": "^2.0.2",
     "modern-css-reset": "^1.4.0",
     "node-fetch": "^2.6.0",
-    "playwright-aws-lambda": "^0.7.0",
-    "playwright-core": "~1.11.0"
+    "playwright-aws-lambda": "~0.6.0",
+    "playwright-core": "~1.7.1"
   }
 }

@@ -1,5 +1,5 @@
-const playwright = require("playwright-core");
-const chromium = require("chrome-aws-lambda");
+const playwright = require("playwright-aws-lambda");
+require("playwright-core");
 const fs = require("fs");
 const path = require("path");
 const libHoney = require("libhoney");
@@ -36,11 +36,7 @@ exports.handler = async function (
   };
   try {
     console.log("here?");
-    browser = await playwright.chromium.launch({
-      args: chromium.args,
-      executablePath: await chromium.executablePath,
-      headless: chromium.headless
-    });
+    browser = await playwright.launchChromium();
     console.log("browser launched");
     const context = await browser.newContext();
     const page = await context.newPage();
