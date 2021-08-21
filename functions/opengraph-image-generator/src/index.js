@@ -1,7 +1,5 @@
-import {
-  html,
-  render,
-} from "https://unpkg.com/htm/preact/standalone.module.js";
+import { html } from "htm/preact";
+import { render } from "preact";
 
 const telescope = (props) => html`<svg
   width="71"
