@@ -27,9 +27,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "site/_includes/assets/subfont": "/subfont",
   });
-  eleventyConfig.addPassthroughCopy({
-    "utils/image.js": "/image.js",
-  });
   //Plugins
   syntaxHighlighting = require("@11ty/eleventy-plugin-syntaxhighlight");
   eleventyConfig.addPlugin(syntaxHighlighting);

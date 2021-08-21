@@ -35,16 +35,13 @@ exports.handler = async function (
     body: "There was an error generating the open graph image",
   };
   try {
-    console.log("here?");
     browser = await playwright.launchChromium();
-    console.log("browser launched");
     const context = await browser.newContext();
     const page = await context.newPage();
     page.setViewportSize({
       width: 1200,
       height: 630,
     });
-    console.log("page opened");
     await page.setContent(await htmlString);
     const tags = queryStringParameters.tags
       ? decodeURIComponent(queryStringParameters.tags).split(",")
@@ -60,7 +57,6 @@ exports.handler = async function (
     const handle = await page.addScriptTag({
       content: script,
     });
-    console.log(script);
     await page.waitForSelector("#page-wrapper", { state: "attached" });
     const boundingRect = await page.evaluate(() => {
       const container = document.getElementById("page-wrapper");
