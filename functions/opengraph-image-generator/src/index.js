@@ -118,13 +118,13 @@ const vue = (props) => html`<svg
 </svg> `;
 const flyingTelescopeSvg = (props) => html` <svg
   viewBox="0 0 268 159"
+  width="250"
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
   style="${{
     transform: "matrix(0.99, -0.18, 0.17, 0.98, 0, 0)",
     //transform: "matrix(0.87, -0.5, 0.48, 0.87, 0, 0)",
     left: "-19px",
-    width: "266px",
     position: "relative",
     display: "block",
   }}"
@@ -180,8 +180,7 @@ const flyingTelescopeSvg = (props) => html` <svg
 
 const flyingFerrisSvg = (props) => html`
   <svg
-    width="287"
-    height="178"
+    width="250"
     viewBox="0 0 287 178"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -251,8 +250,7 @@ const flyingFerrisSvg = (props) => html`
 
 const flyingVue = (props) => html`
   <svg
-    width="287"
-    height="186"
+    width="250"
     viewBox="0 0 287 186"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
