@@ -2,12 +2,16 @@ const playwright = require("playwright-aws-lambda");
 require("playwright-core");
 const fs = require("fs");
 const path = require("path");
-const script = fs.readFileSync(path.join(__dirname, "./image.js"), "utf-8");
 const libHoney = require("libhoney");
+
+const htmlString = require("./image-html-string");
+
 const honeycomb = new libHoney({
   writeKey: process.env.HONEYCOMB_API_KEY,
   dataset: process.env.HONEYCOMB_DATA_SET,
 });
+
+const script = fs.readFileSync(path.join(__dirname, "./image.js"), "utf-8");
 
 exports.handler = async function (
   { UserId, UserAction, queryStringParameters },
@@ -38,38 +42,29 @@ exports.handler = async function (
       width: 1200,
       height: 630,
     });
-    await page.setContent(
-      `<!DOCTYPE html>
-        <html>
-            <head>
-                <meta charset="utf-8" />
-            </head>
-            <body>
-                <div id='container'></div>
-            </body>
-        </html>
-    `
-    );
+    await page.setContent(await htmlString);
     const tags = queryStringParameters.tags
       ? decodeURIComponent(queryStringParameters.tags).split(",")
       : [];
-    console.log(decodeURIComponent(queryStringParameters.author));
     await page.addScriptTag({
       content: `
             window.title = "${
               decodeURIComponent(queryStringParameters.title) || "No Title"
             }"
             window.tags = ${JSON.stringify(tags)};
-            window.author = "${
-              decodeURIComponent(queryStringParameters.author) || ""
-            }";
         `,
     });
-    await page.addScriptTag({
+    const handle = await page.addScriptTag({
       content: script,
     });
+    await page.waitForSelector("#page-wrapper", { state: "attached" });
     const boundingRect = await page.evaluate(() => {
-      const container = document.getElementById("root-div");
+      const container = document.getElementById("page-wrapper");
+      if (!container) {
+        setTimeout(() => {
+          container = document.getElementById("page-wrapper");
+        }, 200);
+      }
       const { x, y, width, height } = container.getBoundingClientRect();
       return { x, y, width, height };
     });

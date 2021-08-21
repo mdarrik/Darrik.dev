@@ -23,12 +23,14 @@
     "cssnano": "^5.0.7",
     "dotenv": "^10.0.0",
     "eslint": "^7.17.0",
+    "htm": "^3.1.0",
     "postcss": "^8.3.6",
     "postcss-at-rules-variables": "^0.3.0",
     "postcss-cli": "^8.3.1",
     "postcss-each": "^1.1.0",
     "postcss-import": "^14.0.2",
     "postcss-nesting": "^8.0.1",
+    "preact": "^10.5.14",
     "rollup": "^2.6.1",
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-globals": "^1.4.0"
@@ -36,10 +38,9 @@
   "dependencies": {
     "cloudinary": "^1.21.0",
     "libhoney": "^2.0.2",
-    "lit-html": "^1.2.1",
     "modern-css-reset": "^1.4.0",
     "node-fetch": "^2.6.0",
-    "playwright-aws-lambda": "^0.6.0",
-    "playwright-core": "^1.1.1"
+    "playwright-aws-lambda": "~0.6.0",
+    "playwright-core": "~1.7.1"
   }
 }
