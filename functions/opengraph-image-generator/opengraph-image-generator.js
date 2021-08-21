@@ -61,7 +61,7 @@ exports.handler = async function (
       content: script,
     });
     const boundingRect = await page.evaluate(() => {
-      const container = document.getElementById("root-div");
+      const container = document.body;
       const { x, y, width, height } = container.getBoundingClientRect();
       return { x, y, width, height };
     });
