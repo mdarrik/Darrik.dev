@@ -18,6 +18,7 @@ const siteUrl =
 
 exports.handler = async function (event, context) {
   console.log(event);
+  console.log("isPR", process.env.PULL_REQUEST);
   const { queryStringParameters, host } = event;
   const honeycombEvent = honeycomb.newEvent();
   honeycombEvent.add({
