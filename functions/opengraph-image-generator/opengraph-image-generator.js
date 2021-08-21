@@ -60,7 +60,7 @@ exports.handler = async function (
     const handle = await page.addScriptTag({
       content: script,
     });
-    await page.fill("#page-wrapper");
+    await page.waitForSelector("#page-wrapper", { state: "attached" });
     const boundingRect = await page.evaluate(() => {
       const container = document.getElementById("page-wrapper");
       if (!container) {
