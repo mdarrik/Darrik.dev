@@ -1,9 +1,10 @@
-const playwright = require("playwright-aws-lambda");
+const playwright = require("playwright-core");
+const chromium = require("chrome-aws-lambda");
 const fs = require("fs");
 const path = require("path");
 const libHoney = require("libhoney");
 
-const htmlString = import("./image-html-string");
+const htmlString = require("./image-html-string");
 
 const honeycomb = new libHoney({
   writeKey: process.env.HONEYCOMB_API_KEY,
@@ -34,7 +35,12 @@ exports.handler = async function (
     body: "There was an error generating the open graph image",
   };
   try {
-    browser = await playwright.launchChromium();
+    console.log("here?");
+    browser = await playwright.chromium.launch({
+      args: chromium.args,
+      executablePath: await chromium.executablePath,
+      headless: chromium.headless
+    });
     console.log("browser launched");
     const context = await browser.newContext();
     const page = await context.newPage();
