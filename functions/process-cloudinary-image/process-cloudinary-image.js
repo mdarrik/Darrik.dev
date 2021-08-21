@@ -11,15 +11,11 @@ const honeycomb = new libHoney({
   dataset: process.env.HONEYCOMB_DATA_SET,
 });
 
-const siteUrl =
-  (process.env.PULL_REQUEST === "true"
-    ? process.env.DEPLOY_PRIME_URL
-    : process.env.URL) || "http://localhost:8888";
-
 exports.handler = async function (event, context) {
   console.log(event);
-  console.log("isPR", process.env.PULL_REQUEST);
-  const { queryStringParameters, host } = event;
+  console.log("deploy_prime_url", process.env.DEPLOY_PRIME_URL);
+  const { queryStringParameters, rawUrl } = event;
+  const siteUrl = new URL(rawUrl).origin || "http://localhost:8888";
   const honeycombEvent = honeycomb.newEvent();
   honeycombEvent.add({
     functionName: context.functionName,
@@ -29,7 +25,6 @@ exports.handler = async function (event, context) {
     userAction: event.UserAction,
     queryStringParameters,
   });
-  console.log({ host });
   try {
     //https://res.cloudinary.com/darrik-dev/image/upload/v1587278753/darrik.dev/opengraph-images/transparent-png.png
     console.log(
