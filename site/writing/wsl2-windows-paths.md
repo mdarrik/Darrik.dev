@@ -1,6 +1,7 @@
 ---
 tags: ["writing", "dev tools", "notes", "wsl2"]
 title: Getting WSL2 paths for Windows Applications
+description: "Quick look at getting the path for files on your WSL2 system to be used in regular Windows apps"
 date: 2020-08-15T23:00:00.000Z
 ---
 
