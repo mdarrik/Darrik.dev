@@ -1,4 +1,5 @@
 require("dotenv").config();
+const syntaxHighlighting = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 function getAccentBorderColor(color = "") {
   const accentBorderColors = [
@@ -28,7 +29,6 @@ module.exports = function (eleventyConfig) {
     "site/_includes/assets/subfont": "/subfont",
   });
   //Plugins
-  syntaxHighlighting = require("@11ty/eleventy-plugin-syntaxhighlight");
   eleventyConfig.addPlugin(syntaxHighlighting);
 
   //shortCodes
