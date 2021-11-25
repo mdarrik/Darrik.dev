@@ -21,7 +21,10 @@ isMarkdown: true
     sortAlphabetical -%}
     <ul aria-labelledby="topic-header">
         {%- for tag in tags-%}
-        <li><a href="/{{tag | replace: " ", " -" | urlencode}}" class="text-regular md:text-xl">{{tag | capitalize}}</a>
+        <li>
+            <a href="/{{tag | slugify}}" class="text-regular md:text-xl">
+                {{tag | capitalize}}
+            </a>
         </li>
         {%- endfor -%}
     </ul>
