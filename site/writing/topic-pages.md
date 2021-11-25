@@ -7,7 +7,7 @@ pagination:
         - writing
         - all
         - notes
-permalink: /{{tag | replace:" ", "-" | urlencode }}/index.html
+permalink: /{{tag | slugify }}/
 ---
 
 # Posts related to {{ tag }}
