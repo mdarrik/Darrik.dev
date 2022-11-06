@@ -17,7 +17,11 @@ function getAccentBorderColor(color = "") {
         );
   return matchedColor || accentBorderColors[Math.floor(4 * Math.random())];
 }
-
+/**
+ * @typedef {import('@11ty/eleventy/src/UserConfig')} EleventyConfig
+ * @typedef {ReturnType<import('@11ty/eleventy/src/defaultConfig')>} EleventyReturnValue
+ * @type {(eleventyConfig: EleventyConfig) => EleventyReturnValue}
+ */
 module.exports = function (eleventyConfig) {
   //passThrough
   eleventyConfig.addPassthroughCopy("site/images");
