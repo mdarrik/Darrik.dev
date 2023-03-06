@@ -21,6 +21,7 @@ const config = {
     commonjs(),
     replace({
       "process.env.NODE_ENV": JSON.stringify("production"),
+      preventAssignment: true,
     }),
     globals(),
     builtins(),
