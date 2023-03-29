@@ -44,11 +44,12 @@ h6 {
 
 h1 {
   font-size: var(--font-3xl);
-  line-height: 1;
+  line-height: 1.1;
 }
 
 h2 {
   font-size: var(--font-2xl);
+  line-height: 1.1;
 }
 
 h3 {
@@ -70,7 +71,9 @@ hr {
 }
 
 .card-block,
-.newsletter-form {
+.newsletter-form,
+.video-figure,
+.callout {
   border: 1px solid var(--text-color);
   box-shadow: 0px 4px 4px var(--shadow-color);
   border-radius: var(--border-radius);
@@ -92,29 +95,50 @@ ul.post-list {
   }
 }
 
-code {
+code,
+kbd {
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   color: var(--inline-code-color);
-  font-style: italic;
+  font-weight: 500;
 }
 
-.markdown {
-  & h1 {
-    margin-block-end: var(--space-12);
-  }
-  & h2,
-  & h3,
-  & h4,
-  & h5,
-  & h6 {
-    & + p,
-    & + span,
-    & + pre {
-      margin-block-start: var(--space-1);
+.markdown,
+article.markdown {
+  max-width: 40ch;
+  margin-inline: auto;
+  @media (min-width: 40rem) {
+    max-width: 80ch;
+    & h1 {
+      max-width: 30ch;
+      text-wrap: balance;
+    }
+    & h2,
+    & h3 {
+      max-width: 36ch;
+      text-wrap: balance;
     }
   }
-  & p,
-  & pre {
-    margin-block-end: var(--space-8);
+  & > * + * {
+    margin-block-start: var(--flow-space, 1em);
+  }
+  & :is(h1, h2, h3, blockquote) {
+    --flow-space: 1.5em;
+  }
+  &
+    :is(
+      pre[class*="language-"],
+      pre[class*="language"] + *,
+      & figure,
+      & figure + *,
+      & .callout
+    ) {
+    --flow-space: 2em;
+  }
+
+  & :is(h1, h2, h3) + * {
+    --flow-space: 0.5em;
+  }
+  & figure figcaption {
+    font-size: var(--font-xs);
   }
 }
