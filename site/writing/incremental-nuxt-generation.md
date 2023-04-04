@@ -2,6 +2,7 @@
 tags: [writing, Nuxt, Vue, jamstack]
 title: Incrementally Generating Pages with Nuxt
 description: How to generate just a few pages to greatly speed up content changes on your Static Nuxt site. 
+date: 2020-12-28T18:00:00-07:00
 ---
 
 # {{title}}

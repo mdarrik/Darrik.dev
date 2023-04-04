@@ -1,0 +1,3 @@
+<div role="note" class="callout" :class="type ?? 'information'">
+    <slot></slot>
+</aside>

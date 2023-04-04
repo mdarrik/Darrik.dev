@@ -1,0 +1,14 @@
+.callout {
+  @media (min-width: 48rem) {
+    max-width: 80%;
+    padding-inline: var(--space-8);
+  }
+  padding-inline: var(--space-4);
+  margin-inline: auto;
+  border: 0;
+  &.information {
+    background: rgba(160, 255, 230, 0.4);
+    border-left: 1ch solid var(--inline-code-color);
+    padding-block: var(--space-3);
+  }
+}

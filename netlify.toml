@@ -13,6 +13,10 @@
   #  port = 8082
    framework = "eleventy"
 
+  
+  [[plugins]]
+  package="./build-plugins/submodule-file-copy"
+
   [functions]
   node_bundler = "zisi"
   [functions.opengraph-image-generator]

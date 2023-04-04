@@ -61,7 +61,7 @@
   --screen-size: sm, md, lg, xl;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background-color: var(--night-sky);
     --text-color: var(--glow-in-the-dark);
@@ -70,4 +70,4 @@
     --shadow-color: rgba(204, 255, 204, 0.25);
     --link-color: var(--pastel-blue);
   }
-}
+} */

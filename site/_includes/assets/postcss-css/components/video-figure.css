@@ -1,0 +1,17 @@
+.video-figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-4);
+  @media (min-width: 48rem) {
+    max-width: 80ch;
+  }
+  @media (min-width: 64rem) {
+    max-width: 50%;
+    margin-inline-start: 20%;
+  }
+  & video {
+    width: 100%;
+  }
+}

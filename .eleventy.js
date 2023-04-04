@@ -1,5 +1,6 @@
 require("dotenv").config();
 const syntaxHighlighting = require("@11ty/eleventy-plugin-syntaxhighlight");
+const pluginWebc = require("@11ty/eleventy-plugin-webc");
 
 function getAccentBorderColor(color = "") {
   const accentBorderColors = [
@@ -34,6 +35,9 @@ module.exports = function (eleventyConfig) {
   });
   //Plugins
   eleventyConfig.addPlugin(syntaxHighlighting);
+  eleventyConfig.addPlugin(pluginWebc, {
+    components: "site/_includes/components/**/*.webc",
+  });
 
   //shortCodes
   eleventyConfig.addPairedShortcode("h1", (content, className = "") => {
