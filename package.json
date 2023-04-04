@@ -40,7 +40,7 @@
     "cloudinary": "^1.21.0",
     "libhoney": "^2.0.2",
     "modern-css-reset": "^1.4.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "playwright-aws-lambda": "^0.10.0",
     "playwright-core": "^1.31.2"
   },
