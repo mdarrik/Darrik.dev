@@ -26,6 +26,7 @@ function getAccentBorderColor(color = "") {
 module.exports = function (eleventyConfig) {
   //passThrough
   eleventyConfig.addPassthroughCopy("site/images");
+  eleventyConfig.addPassthroughCopy("site/robots.txt");
   eleventyConfig.addPassthroughCopy({
     "site/_includes/prism-a11y-dark.css": "prism-a11y-dark.css",
   });
