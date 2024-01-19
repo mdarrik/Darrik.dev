@@ -1,3 +1,0 @@
-[submodule "private-articles"]
-	path = private-articles
-	url = git@github.com:mdarrik/grav-markdown-sync.git
