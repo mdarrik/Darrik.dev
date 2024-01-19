@@ -56,4 +56,4 @@ curl -H "Content-Type: text/plain" -d "rumqttd=trace" http://localhost:3030/logs
 ```
 The docs suggest that you _can_ send any valid [Tokio tracing-subscriber EnvFilter](https://docs.rs/tracing-subscriber/latest/tracing_subscriber/struct.EnvFilter.html#directives) value. However, for most of the debugging I need when testing MQTT clients, managing the `rumqttd` log levels is sufficient. 
 
-<callout>Since this is running only on my local network, I'm relatively comfortable leaving this port constantly exposed while running my broker. If I were hosting my server on the public internet, I'd probably consider a different approach. </callout>
+<callout>Since this is running only on my local network, I'm relatively comfortable leaving this config port constantly exposed while running my broker. If I were hosting my server on the public internet, I'd probably consider a different approach. </callout>
