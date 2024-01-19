@@ -1,34 +1,31 @@
 # example netlify.toml
 [build]
-  command = "npm run deploy-build"
-  functions = "functions"
-  publish = "_site"
-  
-  ## (optional) Settings for Netlify Dev
-  ## https://github.com/netlify/netlify-dev-plugin#project-detection
-  [dev] 
-   command = "npm run serve" # Command to start your dev server
-  #  publish = "_site" # Folder with the static content for _redirect file
-  #  targetPort = 8080
-  #  port = 8082
-   framework = "eleventy"
+command = "npm run deploy-build"
+functions = "functions"
+publish = "_site"
 
-  
-  [[plugins]]
-  package="./build-plugins/submodule-file-copy"
+## (optional) Settings for Netlify Dev
+## https://github.com/netlify/netlify-dev-plugin#project-detection
+[dev]
+command = "npm run serve" # Command to start your dev server
+#  publish = "_site" # Folder with the static content for _redirect file
+#  targetPort = 8080
+#  port = 8082
+framework = "eleventy"
 
-  [functions]
-  node_bundler = "zisi"
-  [functions.opengraph-image-generator]
-    node_bundler = "zisi"
-    external_node_modules = ["playwright-core", "lambdafs"]
-    included_files = ["functions/opengraph-image-generator/image.js"]
 
-  [environment]
+[functions]
+node_bundler = "zisi"
+[functions.opengraph-image-generator]
+node_bundler = "zisi"
+external_node_modules = ["playwright-core", "lambdafs"]
+included_files = ["functions/opengraph-image-generator/image.js"]
+
+[environment]
 #AWS_LAMBDA_JS_RUNTIME="nodejs14.x"
 
 [[headers]]
-  for = "/*"
-  [headers.values]
-    Permissions-Policy = "interest-cohort=()"
-  ## more info on configuring this file: https://www.netlify.com/docs/netlify-toml-reference/ 
+for = "/*"
+[headers.values]
+Permissions-Policy = "interest-cohort=()"
+## more info on configuring this file: https://www.netlify.com/docs/netlify-toml-reference/
