@@ -2,6 +2,7 @@
 layout: layout.njk
 title: Home
 ---
+
 <div class="mb-4 flex flex-col justify-center mx-auto md:block">
   <h1 class="font-semibold md:text-3xl text-2xl mb-1 font-decorative md:inline">
     I'm Darrik Moberg &mdash;
@@ -10,23 +11,27 @@ title: Home
     </span>
   </h1>
 </div>
-  <p class="mb-6">
-    I have a life sciences background and am currently working in the
-    public sector. I mostly code using web &amp; backend technologies. I
-    enjoy working on user-centric products and using technology to
-    streamline user experiences and workflows. I'm also strongly committed
-    to building accessibility-first tools and products.
-  </p>
+<p class="mb-6">
+  I build websites, applications, and developer tooling with an eye for usability and accessibility.
+  I've also started building embedded systems in Rust.
+</p>
+{%renderTemplate "webc" %}
+<callout class="mb-6">
+  I'm looking for a new role! <a href="/for-hire">Hire Me!</a>
+</callout>
+{%endrenderTemplate%}
 <section class="mb-4">
   {%h2 "mb-4"%} Some things I've written{%endh2%}
   <ul class="post-list mx-2">
-  {%-for post in collections.writing reversed-%}
-  <li>
-  <article>
-  <h3 class="text-regular md:text-xl font-decorative font-semibold"><a href="{{post.url | url}}">{{post.data.title}}</a></h3>
-  {{post.data.description}}
-  </article>
-  </li>
-  {%-endfor-%}
+    {%-for post in collections.writing reversed-%}
+    <li>
+      <article>
+        <h3 class="text-regular md:text-xl font-decorative font-semibold">
+          <a href="{{post.url | url}}">{{post.data.title}}</a>
+        </h3>
+        {{post.data.description}}
+      </article>
+    </li>
+    {%-endfor-%}
   </ul>
 </section>
