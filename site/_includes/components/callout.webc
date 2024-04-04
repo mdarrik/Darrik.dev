@@ -1,3 +1,8 @@
-<div role="note" class="callout" :class="type ?? 'information'">
-    <slot></slot>
+<aside
+  webc:root="override"
+  role="note"
+  class="callout"
+  :class="type ?? 'information'"
+>
+  <slot></slot>
 </aside>
