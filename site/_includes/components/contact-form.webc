@@ -1,0 +1,115 @@
+<script type="module">
+  const queryParams = new URLSearchParams(globalThis?.location?.search ?? "?");
+  if (queryParams.has("errors")) {
+    const contactForm = document.getElementById("contact-form");
+    const contactFormErrorsId = "contact-form-errors";
+    /** @type {HTMLUListElement} */
+    const errorMessageContainer = document.getElementById(contactFormErrorsId);
+    try {
+      const submittedName = queryParams.get("name") ?? "";
+      const submittedEmail = queryParams.get("email") ?? "";
+      const submittedMessage = queryParams.get("message") ?? "";
+      //   globalThis.location.search = "";
+      /** @type{HTMLInputElement} */
+      const emailInput = contactForm.querySelector('input[name="email"]');
+      /** @type{HTMLInputElement} */
+      const nameInput = contactForm.querySelector('input[name="name"]');
+      /** @type{HTMLTextAreaElement} */
+      const messageInput = contactForm.querySelector(
+        'textarea[name="message"]'
+      );
+      nameInput.value = submittedName;
+      emailInput.value = submittedEmail;
+      messageInput.value = submittedMessage;
+      const errors = JSON.parse(queryParams.get("errors"));
+      if (errors.email) {
+        const emailErrorLi = document.createElement("li");
+        emailErrorLi.id = "email-error-description";
+        emailInput.setAttribute("aria-describedby", emailErrorLi.id);
+        emailErrorLi.innerText = "Please provide a valid email";
+        errorMessageContainer.appendChild(emailErrorLi);
+        emailInput.ariaInvalid = "true";
+      }
+      if (errors.name) {
+        const nameErrorLi = document.createElement("li");
+        nameErrorLi.id = "name-error-description";
+        nameInput.setAttribute("aria-describedby", nameErrorLi.id);
+        nameErrorLi.innerText =
+          "Please provide your name so I know who I'm reaching out to!";
+        errorMessageContainer.appendChild(nameErrorLi);
+        nameInput.ariaInvalid = "true";
+      }
+      if (errors.message) {
+        const messageErrorLi = document.createElement("li");
+        messageErrorLi.id = "message-error-description";
+        messageInput.setAttribute("aria-describedby", messageErrorLi.id);
+        messageErrorLi.innerText =
+          "Please put something in the contact field so I know what you want to discuss";
+        errorMessageContainer.appendChild(messageErrorLi);
+        messageInput.ariaInvalid = "true";
+      }
+    } catch {
+      errorMessageContainer.innerHTML = String.raw`<li>There was a problem with your form. Please make sure you've filled out each field and try again</li>`;
+    }
+  }
+</script>
+<form
+  action="/contact-successful"
+  data-netlify="true"
+  method="post"
+  name="contact-form"
+  netlify-honeypot="contact-form-other-name"
+  data-page-form="true"
+  class="py-4"
+  id="contact-form"
+>
+  <h2>Get in touch</h2>
+  <p>
+    Fill out this form to reach out to me about a job, ask questions, or just
+    chat. I'll do my best to get back to you in a few days.
+  </p>
+  <ul id="contact-form-errors" class="error error-list callout"></ul>
+
+  <input type="hidden" value="contact-form" name="type" />
+  <input type="hidden" name="page" :value="page.url" />
+  <label
+    for="contact-form-other-name"
+    class="visually-hidden"
+    aria-hidden="true"
+    tabindex="-1"
+  >
+    Other name
+    <input
+      id="contact-form-other-name"
+      name="contact-form-other-name"
+      autocomplete="off"
+    />
+  </label>
+  <p class="visually-hidden" aria-hidden="true">
+    Don't fill out the above field, it's for reducing spam.
+  </p>
+  <div>
+    <label for="contact-form-name">
+      Your Name <span class="required-identifier">(Required)</span>
+    </label>
+    <input id="contact-form-name" name="name" autocomplete="name" />
+  </div>
+  <div>
+    <label for="contact-form-email">
+      Email <span class="required-identifier">(Required)</span>
+    </label>
+    <input
+      id="contact-form-email"
+      type="email"
+      name="email"
+      autocomplete="email"
+    />
+  </div>
+  <div>
+    <label for="contact-message" class="block">
+      Message <span class="required-identifier">(Required)</span>
+    </label>
+    <textarea id="contact-message" name="message" rows="5" cols="50"></textarea>
+  </div>
+  <button type="submit">Contact me!</button>
+</form>

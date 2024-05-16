@@ -35,6 +35,11 @@ description: "Web Dev, Accessibility Specialist, Doing My Best to Make the Web I
     <style>{{css | safe }}</style>
     <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/subfont/Fredericka_the_Great-400-181cba1a4a.woff2"><script async>try{new FontFace('Fredericka the Great__subset',"url(/subfont/Fredericka_the_Great-400-181cba1a4a.woff2) format('woff2'), url(/subfont/Fredericka_the_Great-400-edc6e87de8.woff) format('woff')",{}).load()}catch(e){}</script><style>@font-face{font-display:swap;font-family:Fredericka the Great__subset;font-stretch:normal;font-style:normal;font-weight:400;src:url(/subfont/Fredericka_the_Great-400-181cba1a4a.woff2) format("woff2"),url(/subfont/Fredericka_the_Great-400-edc6e87de8.woff) format("woff");unicode-range:U+64-7a,U+20,U+27,U+30-39,U+41-52,U+2014,U+53-5a,U+61-63}</style>
     <link rel="me" href="https://notacult.social/@mdarrik"/>
+    {% if hasBundle %}
+    <script type="module">
+    {% getBundle "js" %}
+    </script>
+    {% endif %}
     <title>{{title}} | Darrik.dev</title>
 </head>
 <body class="md:flex md:flex-column md:items-stretch">

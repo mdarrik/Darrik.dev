@@ -60,7 +60,8 @@ a {
   color: var(--link-color);
 }
 
-input {
+input,
+textarea {
   height: 1.5rem;
   margin-inline-end: var(--space-4);
 }
@@ -73,10 +74,14 @@ hr {
 .card-block,
 .newsletter-form,
 .video-figure,
-.callout {
+.callout,
+form[data-page-form] {
   border: 1px solid var(--text-color);
   box-shadow: 0px 4px 4px var(--shadow-color);
   border-radius: var(--border-radius);
+  &:has([aria-invalid="true"]) {
+    border: 1px solid var(--error-color);
+  }
 }
 
 ul.post-list {
@@ -121,7 +126,7 @@ article.markdown {
   & > * + * {
     margin-block-start: var(--flow-space, 1em);
   }
-  & :is(h1, h2, h3, blockquote) {
+  & :is(h1, h2, h3, blockquote, contact-form) {
     --flow-space: 1.5em;
   }
   &

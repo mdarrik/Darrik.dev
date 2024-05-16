@@ -1,0 +1,30 @@
+---
+layout: layout.njk
+title: Message Received!
+---
+
+<script type="module" webc:keep>
+  const queryParams = new URLSearchParams(globalThis?.location?.search);
+  const returnUrl = queryParams.get("redirect_url");
+  /**
+   * @type {HTMLTemplateElement}
+   */
+  const template = document.getElementById("return-link-template");
+  const wrapper = document.getElementById("content-wrapper");
+  if (returnUrl && template) {
+    const link = template.content.cloneNode(true);
+    /**
+     * @type {HTMLAnchorElement}
+     */
+    const a = link.firstElementChild;
+    a.href = returnUrl;
+    wrapper.appendChild(link);
+  }
+</script>
+<div id="content-wrapper">
+  <h1 @text="title"></h1>
+  <p>I'll work on getting back to you as soon as I can.</p>
+  <template id="return-link-template">
+    <a href="/">Go back</a>
+  </template>
+</div>
