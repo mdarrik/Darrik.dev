@@ -71,7 +71,7 @@
   <ul id="contact-form-errors" class="error error-list callout"></ul>
 
   <input type="hidden" value="contact-form" name="type" />
-  <input type="hidden" name="page" :value="page.url" />
+  <input type="hidden" name="page" :value="$data.page.url" />
   <label
     for="contact-form-other-name"
     class="visually-hidden"
