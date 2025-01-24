@@ -1,6 +1,5 @@
-let postCSSFilter = require('../../utils/postCss-filter')
+import postCSSFilter from "../../utils/postCss-filter.cjs";
 
-
-module.exports = async function() {
-    return await postCSSFilter('_includes/global.css', (input) => input)
+export default async function () {
+  return await postCSSFilter("_includes/global.css", (input) => input);
 }

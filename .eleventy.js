@@ -1,7 +1,9 @@
-require("dotenv").config();
-const syntaxHighlighting = require("@11ty/eleventy-plugin-syntaxhighlight");
-const pluginWebc = require("@11ty/eleventy-plugin-webc");
-const { EleventyRenderPlugin } = require("@11ty/eleventy");
+import dotenv from "dotenv";
+import syntaxHighlighting from "@11ty/eleventy-plugin-syntaxhighlight";
+import pluginWebc from "@11ty/eleventy-plugin-webc";
+import { EleventyRenderPlugin } from "@11ty/eleventy";
+
+dotenv.config();
 
 function getAccentBorderColor(color = "") {
   const accentBorderColors = [
@@ -24,7 +26,7 @@ function getAccentBorderColor(color = "") {
  * @typedef {ReturnType<import('@11ty/eleventy/src/defaultConfig')>} EleventyReturnValue
  * @type {(eleventyConfig: EleventyConfig) => EleventyReturnValue}
  */
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   //passThrough
   eleventyConfig.addPassthroughCopy("site/images");
   eleventyConfig.addPassthroughCopy("site/robots.txt");
@@ -91,4 +93,4 @@ module.exports = function (eleventyConfig) {
       input: "./site/",
     },
   };
-};
+}
