@@ -7,9 +7,14 @@ export default {
   keywords: ["Web Development", "HTMl", "CSS", "JavaScript"],
   socialMedia: [
     {
-      name: "Twitter",
-      url: "https://www.twitter.com/mdarrik",
-      icon: "twitter.svg#twitter",
+      name: "Mastodon",
+      url: "https://notacult.social/@mdarrik",
+      icon: "mastodon.svg#mastodon",
+    },
+    {
+      name: "Bluesky",
+      url: "https://bsky.app/profile/mdarrik.bsky.social",
+      icon: "bluesky.svg#bluesky",
     },
     {
       name: "GitHub",
@@ -17,11 +22,6 @@ export default {
       icon: "github.svg#github",
     },
     //  {"name": "Patreon", "url": "https://www.patreon.com/mdarrik", "icon": "patreon.svg#patreon"},
-    {
-      name: "Dev.To",
-      url: "https://www.dev.to/mdarrik",
-      icon: "dev-dot-to.svg#dev",
-    },
   ],
   year: new Date().getFullYear(),
   // if from pull request, set prime_url, otherwise set site base url. fallback to localhost
