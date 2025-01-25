@@ -1,0 +1,3 @@
+footer ul a[aria-label]:has(svg) {
+  display: block;
+}
