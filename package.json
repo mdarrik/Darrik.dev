@@ -38,6 +38,7 @@
     "rollup-plugin-node-globals": "^1.4.0"
   },
   "dependencies": {
+    "@netlify/blobs": "^11.0.3",
     "cloudinary": "^1.21.0",
     "libhoney": "^2.0.2",
     "modern-css-reset": "^1.4.0",
