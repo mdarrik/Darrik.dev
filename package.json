@@ -14,7 +14,7 @@
     "deploy-build": "eleventy && rollup -c functions/opengraph-image-generator/rollup.config.js"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy": "^3.1.6",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@11ty/eleventy-plugin-webc": "^0.11.2",
     "@fullhuman/postcss-purgecss": "^4.0.3",
@@ -38,6 +38,7 @@
     "rollup-plugin-node-globals": "^1.4.0"
   },
   "dependencies": {
+    "@netlify/blobs": "^11.0.3",
     "cloudinary": "^1.21.0",
     "libhoney": "^2.0.2",
     "modern-css-reset": "^1.4.0",
@@ -47,6 +48,6 @@
     "zod": "^3.23.8"
   },
   "volta": {
-    "node": "20.18.1"
+    "node": "24.21.0"
   }
 }

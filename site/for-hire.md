@@ -1,7 +1,7 @@
 ---
 layout: layout.njk
 title: For Hire
-published: true
+published: false
 isMarkdown: true
 hasBundle: true
 templateEngineOverride: 'md, webc'

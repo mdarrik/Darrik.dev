@@ -36,6 +36,7 @@ description: "Web Dev, Accessibility Specialist, Doing My Best to Make the Web I
     <style>{{css | safe }}</style>
     <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/subfont/Fredericka_the_Great-400-181cba1a4a.woff2"><script async>try{new FontFace('Fredericka the Great__subset',"url(/subfont/Fredericka_the_Great-400-181cba1a4a.woff2) format('woff2'), url(/subfont/Fredericka_the_Great-400-edc6e87de8.woff) format('woff')",{}).load()}catch(e){}</script><style>@font-face{font-display:swap;font-family:Fredericka the Great__subset;font-stretch:normal;font-style:normal;font-weight:400;src:url(/subfont/Fredericka_the_Great-400-181cba1a4a.woff2) format("woff2"),url(/subfont/Fredericka_the_Great-400-edc6e87de8.woff) format("woff");unicode-range:U+64-7a,U+20,U+27,U+30-39,U+41-52,U+2014,U+53-5a,U+61-63}</style>
     <link rel="me" href="https://notacult.social/@mdarrik"/>
+    <link rel="canonical" href="{{siteMetadata.url}}{{page.url}}" />
     {% if hasBundle %}
     <script type="module">
     {% getBundle "js" %}
@@ -63,8 +64,8 @@ description: "Web Dev, Accessibility Specialist, Doing My Best to Make the Web I
                 <li><a href="/writing/"
                         class="px-2 {{ 'active' | conditionalContains(page.url, '/writing/') }}"
                         {%if page.url == '/writing/'%}aria-current="page" {%endif%}>Writing</a></li>
-                <li><a href="/for-hire" class="px-2 {{ 'active' | conditionalContains(page.url, '/for-hire/') }}"
-                        {%if page.url == '/for-hire/'%}aria-current="page" {%endif%}>Hire Me</a>
+               {# <li><a href="/for-hire" class="px-2 {{ 'active' | conditionalContains(page.url, '/for-hire/') }}"
+                        {%if page.url == '/for-hire/'%}aria-current="page" {%endif%}>Hire Me</a></li> #}
                 <li>
                     <a href="https://www.github.com/mdarrik" class="justify-center" aria-labelledby="nav-link-github-label">
                     <div class="inline mt-2 md:m-0">
